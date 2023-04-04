@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 - 2CAW</title>
+    <style>
+
+        /* 
+
+            ANOTAÇÕES [SELETORES]:
+
+            * CLASSES (class)
+                - O seletor "class" é utilizado para mais de uma aparição do elemento no código;
+                - O símbolo identificador de classe é o ponto final (.);
+
+            * ID (id)
+                - O seletor "id" é utilizado para somente uma aparição do elemento no código;
+                - O símbolo identificador de id é a hashtag (#);
+
+            * ATRIBUTO ([atributo="valor"])
+                - O seletor "atributo" é utilizado para um elemento/condição muito específico;
+                - O símbolo identificador de atributo é os colchetes, com os parâmetros ([atributo="valor"]);
+
+        */
+
+        body {
+            color: purple;
+        }
+
+        header {
+            color: black;
+        }
+        
+        #description-title {
+            font-size: 16px;
+        }
+
+        .paragrafo-classe {
+            color: rgb(255, 0, 0);
+        }
+
+        #paragrafo-id {
+            color: rgb(139, 0, 0);
+        }
+
+        a[target="_blank"] {
+            color: rgb(206, 86, 106);
+        }
+
+        section > p {
+            color: darkcyan;
+        }
+
+        /* ESTILOS: Primeira ocorrência de p que é irmão de section */
+        section + p {
+            border: 2px solid blue;
+        }
+
+
+        p.passar-mouse {
+            color: black;
+        }
+
+        p.passar-mouse:hover {
+            color: orange;
+            cursor: pointer;
+        }
+
+        section p::first-letter {
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>2CAW - Construção de Aplicações Web</h1>
+        <p>
+            <strong id="description-title">Aula de hoje: seletores em CSS</strong>
+            <br>
+            Vamos usar estilos internos no CSS, usando os seletores CLASSES e IDs.
+        </p>
+    </header>
+
+    <!-- 
+        ANOTAÇÕES [SELETORES]:
+
+        * CLASSES (class)
+            - A classe, numa tag HTML, é identificado por:
+            <tag class="nome_da_classe">valor</tag>
+            OU
+            <tag class="nome_da_classe">
+
+
+        * ID (id)
+            - O id, numa tag HTML, é identificado por:
+            <tag id="nome_do_id">valor</tag>
+            OU
+            <tag id="nome_do_id">
+    -->
+
+    <p class="paragrafo-classe">Este parágrafo foi usado com a classe paragrafo-classe.</p>
+    <p id="paragrafo-id">Já este outro, foi usado o seletor ID chamado paragrafo-id.</p>
+    <a href="#" target="_blank">Ou, por sua vez, temos um link que foi colorido por conta do atributo <strong>"[target='_blank']"</strong> aplicado.</a>
+    <p>Aqui, vamos testar se a herança dos estilos será aplicada. (E não é que funcionou?)</p>
+
+    
+    <!-- Uso de estilos: Seleciona todos os elementos <p> onde o pai é um elemento section -->
+    <section>
+        <p>Foi selecionado os elementos p onde o pai é um elemento section.</p>
+    </section>
+    <section>
+        <p class="passar-mouse">Passe o cursor do mouse em cima de mim!</p>
+    </section>
+</body>
+</html>
