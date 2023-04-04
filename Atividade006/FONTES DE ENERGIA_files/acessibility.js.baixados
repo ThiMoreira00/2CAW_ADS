@@ -1,0 +1,130 @@
+﻿var AcessibilityApplication = function(){
+	this.init = function(){
+
+		var acessibility = acessibility || {};
+		var control = false;
+
+		acessibility.init = function(){
+			acessibility.navigation();
+			acessibility.changeColor();
+			acessibility.readAcessibilityCookie();
+		};
+
+		acessibility.navigation = function() {
+		
+			var currentUrl = window.location.href.toLowerCase();
+			
+			var goToContentElement = { element: $('#DeltaPlaceHolderMain'), top: $('#DeltaPlaceHolderMain').offset().top - 150 };
+			var goToContentHref = $('.go-to-content').attr('href');
+			
+			if( window.location.pathname == '/pt' || !window.location.pathname == '/es' || window.location.pathname == '/en') {
+				
+				goToContentHref = '#epe-home';
+				goToContentElement = { element: $('.nav-stacked a:first-child'), top: $('#epe-home').offset().top - 200 };
+
+			} else {
+			
+				goToContentHref = '#DeltaPlaceHolderMain';
+				
+				if( $('#DeltaPlaceHolderMain h2.color-pantone-1235').length > 0 ) {
+					goToContentElement = { element: $('#DeltaPlaceHolderMain h2'), top: $('#DeltaPlaceHolderMain h2').offset().top - 100 };
+				} 			
+			}
+			
+			$(document).on('click', '.go-to-content', function(e){
+				e.preventDefault();
+				
+				if(window.location.pathname == '/pt' || window.location.pathname == '/es' || window.location.pathname == '/en') {
+					goToContentElement = { element: $('.nav-stacked li:first-child a'), top: $('#epe-home').offset().top - 100};
+				} 
+				
+				$('.go-to-content').attr('href', goToContentHref);
+				$('#s4-workspace').animate({scrollTop: goToContentElement.top},"slow");
+				setTimeout(function(){
+					goToContentElement.element.focus();
+				}, 200);
+			});
+
+			$(document).on('click',	'.go-to-menu', function(e) {
+				e.preventDefault();
+	           	setTimeout(function(){
+	           		$('#navbar-collapse-1 li:first-child a').focus();
+	       		}, 200);
+			});	
+			
+			$(document).on('click',	'.go-to-search', function(e) {
+				e.preventDefault();
+	           	setTimeout(function(){
+	           		$('#SearchBox input').focus();
+	       		}, 200);
+			});	
+
+			$(document).on('click', '.go-to-footer', function(e) {
+				e.preventDefault();
+				
+				$('#s4-workspace').animate({scrollTop: $('#links-footer').offset().top},"slow");
+				setTimeout(function(){
+					$('#links-footer li:first-child a').focus();
+				}, 200);
+			});
+
+		};
+
+		acessibility.changeColor = function() {
+			$('#high-contrast').on('click', function() {
+				if($.cookie("Acessibility") == "no" || $.cookie("Acessibility") == undefined) {
+					acessibility.activeContrast();
+				}
+				else {
+					acessibility.disableContrast();
+				}
+			});
+		};
+
+		acessibility.readAcessibilityCookie = function () {
+			if($.cookie("Acessibility") != undefined){
+			 	if($.cookie("Acessibility") == "yes") {
+					acessibility.activeContrast();
+				}
+				else {
+					acessibility.disableContrast();
+				}
+			}
+			else acessibility.writeAcessibilityCookie("no");
+		};
+
+		acessibility.writeAcessibilityCookie = function(item) {
+	        $.cookie("Acessibility", item, {
+	            expires: 90,
+	            path: "/"
+	        });
+	    };
+		acessibility.activeContrast = function() {
+			acessibility.writeAcessibilityCookie("yes");
+			$('body').addClass('contraste');
+			$('.popover-calendar').addClass('contraste');
+			$('.logo img').attr('src', "/PublishingImages/Logos/logo-epe-branco.png");
+			if(location.pathname.indexOf('servidores')!=-1 && location.href.indexOf('?')===-1) {				
+				window.location = "?ac=true";
+			}
+		};
+
+		acessibility.disableContrast = function() {
+			acessibility.writeAcessibilityCookie("no");
+			$('body').removeClass('contraste');
+			$('.popover-calendar').removeClass('contraste');
+			$('.logo img').attr('src', "/PublishingImages/Logos/logo-epe-site.png");
+			if(location.pathname.indexOf('servidores')!=-1 && location.href.indexOf('?')!=-1) {
+				var loc = location.href;
+				location.href = loc.slice(0,loc.indexOf("?"));
+		};
+
+		
+		}
+		return acessibility.init();
+
+	};
+
+	return this.init();
+};
+var acess = new AcessibilityApplication();
