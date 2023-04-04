@@ -1,0 +1,44 @@
+﻿window.onload = function()
+{
+	$(".content-render").on('click','.pagination a',function()
+	{
+		var item = $(this);
+		if(item.parent("li.disabled").length == 0)
+		{
+			var page = item .attr("data-page");
+			var parent = item.parents(".content-render");
+			$("input[type='hidden']",parent).val(page);
+			$("form").submit();
+		}
+	});	
+	$('input[data-filter]').each(function()
+	{
+		var filter = $(this).attr('data-filter');
+		$(this).val(filter);	
+	});
+	$('select[data-filter]').each(function()
+	{
+		var filter = $(this).attr('data-filter');
+		$(this).val(filter);	
+	});
+	$("a#send").on("click",function()
+	{
+		var replace = [];
+		var query = "";
+		$('[data-filter]').each(function(){
+			var name = $(this).attr("name");
+			var value = $(this).val();
+			replace.push('\\/'+ name+'(-[ a-zA-Z\u00C0-\u017F0-9-]*|)');
+			if(value)
+			{
+				query +="/" + name +"-" + value;
+			}
+			else
+			{
+				query +="/" + name;
+			}
+		});	
+		var re = new RegExp(replace.join('|'),"g");
+		window.location.href = decodeURI(window.location.href).replace(re,"") + query;
+	});
+};
