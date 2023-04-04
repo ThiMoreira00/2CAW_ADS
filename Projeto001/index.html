@@ -45,7 +45,7 @@
         }
 
         main {
-            padding: 3rem 6rem;
+            padding: 3rem 0rem;
         }
 
         footer {
@@ -61,6 +61,11 @@
             border-radius: 0.5rem;
             padding: 1rem;
             width: 300px;
+            display: flex;
+        }
+
+        figure.venda_produto:not(figure.venda_produto > img, figcaption, p) {
+            display: initial;
         }
 
         figure.venda_produto > figcaption {
@@ -76,8 +81,18 @@
 
         article.produtos {
             background-color: rgba(53, 21, 0, 0.514);
+            padding: 2rem 6rem;
+        }
+
+        section.home > h1 {
+            font-size: 2rem;
+        }
+
+        section.home {
+            margin: 3rem 6rem;
         }
         
+
     </style>
 </head>
 <body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif; font-weight: 400;">
@@ -85,11 +100,14 @@
         <img src="logo_musical.png" width="50px" alt="Logotipo - Ateliê Musical">
     </header>
     <main>
-        <h1>Ateliê Musical</h1>
-        <section class="home-CTA">
+        <section class="home">
+            <h1>Ateliê Musical</h1>
             <article>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nemo facilis explicabo modi odit repellat? Aliquam in velit quidem. Illo veritatis vel quo expedita quos eius illum accusantium adipisci repellat.</p>
             </article>
+        </section>
+        <section class="home-CTA">
+            
             <article class="produtos">
                 <h2>Nossos produtos</h2>
                 <p>Confira alguns dos nossos produtos que estão a venda</p>
