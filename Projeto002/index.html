@@ -86,6 +86,7 @@
             background-color: rgba(0, 0, 0, 0.171);
             padding: 3rem;
             margin: 1rem 0;
+            display: flex;
         }
 
         h2 {
@@ -101,8 +102,29 @@
             border-radius: 0.5rem;
             padding: 1rem;
             width: 300px;
-            /* display: flex; */
+            display: flex;
+            flex-wrap: wrap;
         }
+
+        p.nome_produto {
+            font-weight: bold;
+            display: block;
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+        }
+
+        p.valor_produto {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: darkgreen;
+            margin: 1rem 0;
+        }
+
+        span.parcela_produto {
+            font-size: 0.75rem;
+            color: rgb(34, 34, 34);
+        }
+        
 
     </style>
 </head>
@@ -152,21 +174,27 @@
                     <figure class="venda_produto">
                         <img src="https://images.tcdn.com.br/img/img_prod/452589/bola_volei_mikasa_mva_200_1712_3_20180614144928.jpg" alt="Bola vôlei Mikasa MVA 200" height="300px">
                         <figcaption>
-                            <p>Bola vôlei Mikasa MVA 200</p>
-                            <strong>R$XXX,XX</strong>
+                            <p class="nome_produto">Bola vôlei Mikasa MVA 200</p>
+                            <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
+                            <p>XX% de desconto com PIX</p>
                         </figcaption>
                     </figure>
                     <figure class="venda_produto">
                         <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="300px">
                         <figcaption>
-                            <p>Joelheira Penalty Indoor V Preta</p>
-                            <strong>R$89,90 (10x de R$8,99)</strong>
+                            <p class="nome_produto">Joelheira Penalty Indoor V Preta</p>
+                            <p class="valor_produto">R$89,90 <span class="parcela_produto">(10x de R$8,99)</span></p>
                             <p>10% de desconto com PIX</p>
                         </figcaption>
                     </figure>
                     <figure class="venda_produto">
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                        <img src="https://static3.tcdn.com.br/img/img_prod/311840/tenis_asics_gel_rebound_preto_109925_3_b5f5766fa88cd9b939dcdc5832119544.jpg" alt="Tênis Asics Gel-Rebound Preto" height="300px">
+                        <figcaption>
+                            <p class="nome_produto">Tênis Asics Gel-Rebound Preto</p>
+                            <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
+                            <p>XX% de desconto com PIX</p>
+                            
+                        </figcaption>
                     </figure>
                     <!-- Inserir elemento surpresa [RIGHT] -->
                 </section>
