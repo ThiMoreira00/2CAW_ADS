@@ -27,7 +27,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>[inserir nome]</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -82,12 +82,26 @@
             text-align: center;
         }
 
-        section.produtos {
+        section.produtos-section {
+            background-color: rgba(0, 0, 0, 0.171);
             padding: 3rem;
+            margin: 1rem 0;
         }
 
-        section > article > section {
-            background-color: rgba(0, 0, 0, 0.171);
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        figure.venda_produto {
+            background-color: #00000041;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            width: 300px;
+            /* display: flex; */
         }
 
     </style>
@@ -106,61 +120,68 @@
     </header>
     <main>
         <section>
-            <article>
+            <article style="padding: 6rem;">
                 <h2>[inserir nome]</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</p>
             </article>
             <article>
-                <section class="produtos">
+                <section style="padding-left: 9rem;">
                     <h2>Produtos</h2>
                     <p>Confira aqui nossos produtos</p>
                 </section>
-                <section>
+                <section class="produtos-section">
                     <h3>Futebol</h3>
                     <!-- Inserir elemento surpresa [LEFT] -->
-                    <figure>
+                    <figure class="venda_produto">
                         <img src="#" alt="#">
                         <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
                     </figure>
-                    <figure>
+                    <figure class="venda_produto">
                         <img src="#" alt="#">
                         <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
                     </figure>
-                    <figure>
+                    <figure class="venda_produto">
                         <img src="#" alt="#">
                         <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
                     </figure>
                     <!-- Inserir elemento surpresa [RIGHT] -->
                 </section>
-                <section>
+                <section class="produtos-section">
                     <h3>Vôlei</h3>
                     <!-- Inserir elemento surpresa [LEFT] -->
-                    <figure>
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                    <figure class="venda_produto">
+                        <img src="https://images.tcdn.com.br/img/img_prod/452589/bola_volei_mikasa_mva_200_1712_3_20180614144928.jpg" alt="Bola vôlei Mikasa MVA 200" height="300px">
+                        <figcaption>
+                            <p>Bola vôlei Mikasa MVA 200</p>
+                            <strong>R$XXX,XX</strong>
+                        </figcaption>
                     </figure>
-                    <figure>
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                    <figure class="venda_produto">
+                        <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="300px">
+                        <figcaption>
+                            <p>Joelheira Penalty Indoor V Preta</p>
+                            <strong>R$89,90 (10x de R$8,99)</strong>
+                            <p>10% de desconto com PIX</p>
+                        </figcaption>
                     </figure>
-                    <figure>
+                    <figure class="venda_produto">
                         <img src="#" alt="#">
                         <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
                     </figure>
                     <!-- Inserir elemento surpresa [RIGHT] -->
                 </section>
-                <section>
+                <section class="produtos-section">
                     <h3>Basquete</h3>
                     <!-- Inserir elemento surpresa [LEFT] -->
-                    <figure>
+                    <figure class="venda_produto">
                         <img src="#" alt="#">
                         <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
                     </figure>
-                    <figure>
+                    <figure class="venda_produto">
                         <img src="#" alt="#">
                         <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
                     </figure>
-                    <figure>
+                    <figure class="venda_produto">
                         <img src="#" alt="#">
                         <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
                     </figure>
