@@ -31,6 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo-sportsshop.png" type="image/x-icon">
     <style>
 
         /* ATENÇÃO! O uso do CSS interno é PROIBIDO! TRANSCREVA para CSS inline! 
@@ -39,9 +40,12 @@
 
         header {
             display: flex;
-            justify-content: center;
             border-bottom: 1px solid rgba(217, 217, 217);
-            padding-bottom: 1rem;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: rgb(247 247 247);
+            padding: 0.5rem;
         }
 
         nav {
@@ -51,6 +55,8 @@
         nav > ul {
             list-style: none;
             color: #f60;
+            display: inline;
+            font-weight: bold;
         }
         
         nav ul li {
@@ -65,7 +71,7 @@
             color: #f60;
         }
         
-        nav button {
+        header button {
             background-color: rgb(247, 152, 63);
             border: none;
             padding: 0.75rem 1.25rem;
@@ -73,6 +79,7 @@
             color: white;
             font-weight: bold;
             display: inline-block;
+            cursor: pointer;
         }
 
         footer {
@@ -83,18 +90,19 @@
         }
 
         section.produtos-section {
-            background-color: rgba(0, 0, 0, 0.171);
+            /* background-color: rgba(0, 0, 0, 0.171); */
             padding: 3rem;
             margin: 1rem 0;
             display: flex;
+            justify-content: space-evenly;
+        }
+
+        h1, h3 {
+            font-size: 1.25rem;
         }
 
         h2 {
             font-size: 1.5rem;
-        }
-
-        h3 {
-            font-size: 1.3rem;
         }
 
         figure.venda_produto {
@@ -132,6 +140,7 @@
             border-radius: 0.5rem;
             font-weight: bold;
             color: white;
+            cursor: pointer;
         }
 
         figcaption {
@@ -143,15 +152,16 @@
 </head>
 <body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif; font-size: 0.85rem;">
     <header>
-        <h1>SportsShop</h1>
+        <img src="logo-sportsshop.png" alt="SportsShop" height="50px" style="display: flex;">
         <nav>
-            <ul>
+            <!-- <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Produtos</a></li>
                 <li><a href="#">Sobre</a></li>
-            </ul>
-            <button>Faça login</button>
+            </ul> -->
+            <input type="text" name="" id="" placeholder="O que você está procurando hoje?">
         </nav>
+        <button>Faça login</button>
     </header>
     <main>
         <section>
