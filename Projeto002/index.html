@@ -100,7 +100,7 @@
         figure.venda_produto {
             background-color: #00000041;
             border-radius: 0.5rem;
-            padding: 1rem;
+            padding: 1.5rem 1rem;
             width: 300px;
             display: flex;
             flex-wrap: wrap;
@@ -122,7 +122,20 @@
 
         span.parcela_produto {
             font-size: 0.75rem;
-            color: rgb(34, 34, 34);
+            color: rgb(95, 95, 95);
+        }
+
+        button.button-comprar {
+            padding: 0.75rem 7rem;
+            background-color: darkgreen;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        figcaption {
+            margin: 0.5em 0;
         }
         
 
@@ -152,24 +165,37 @@
                     <p>Confira aqui nossos produtos</p>
                 </section>
                 <section class="produtos-section">
-                    <h3>Futebol</h3>
+                    <!-- <h3>Futebol</h3> -->
                     <!-- Inserir elemento surpresa [LEFT] -->
                     <figure class="venda_produto">
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                        <img src="https://images.tcdn.com.br/img/img_prod/213069/chuteira_futebol_campo_penalty_bravo_xxi_12575_1_d3ef116614757a4e0e30c6c2c125797f.jpg" alt="Chuteira Futebol Campo Penalty Bravo XXII" height="300px">
+                        <figcaption>
+                            <p class="nome_produto">Chuteira Futebol Campo Penalty Bravo XXII</p>
+                            <p class="valor_produto">R$139,90 <span class="parcela_produto">ou 5x de R$27,98 sem juros</span></p>
+                            <button class="button-comprar">COMPRAR</button>
+                        </figcaption>
                     </figure>
                     <figure class="venda_produto">
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                        <img src="https://images.tcdn.com.br/img/img_prod/213069/luva_de_goleiro_three_stars_touch_preta_12236_4_232e31e54e1d6d27d6cd8f3e5cc15c34.jpg" alt="Luva de Goleiro Three Starts Touch Preta" height="300px">
+                        <figcaption>
+                            <p class="nome_produto">Luva de Goleiro Three Starts Touch Preta</p>
+                            <p class="valor_produto">R$249,90 à vista <span class="parcela_produto">ou 10x de R$24,90 sem juros</span></p>
+                            <button class="button-comprar">COMPRAR</button>
+                        </figcaption>
                     </figure>
                     <figure class="venda_produto">
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                        <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="300px">
+                        <figcaption>
+                            <p class="nome_produto">Uniforme Esportivo com camisa modelo Milan Vermelho</p>
+                            <p class="valor_produto">R$239,90 à vista <span class="parcela_produto">ou 10x de R$23,90 sem juros</span></p>
+                            <p>XX% de desconto com PIX</p>
+                            <button class="button-comprar">COMPRAR</button>
+                        </figcaption>
                     </figure>
                     <!-- Inserir elemento surpresa [RIGHT] -->
                 </section>
                 <section class="produtos-section">
-                    <h3>Vôlei</h3>
+                    <!-- <h3>Vôlei</h3> -->
                     <!-- Inserir elemento surpresa [LEFT] -->
                     <figure class="venda_produto">
                         <img src="https://images.tcdn.com.br/img/img_prod/452589/bola_volei_mikasa_mva_200_1712_3_20180614144928.jpg" alt="Bola vôlei Mikasa MVA 200" height="300px">
@@ -177,6 +203,7 @@
                             <p class="nome_produto">Bola vôlei Mikasa MVA 200</p>
                             <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
                             <p>XX% de desconto com PIX</p>
+                            <button class="button-comprar">COMPRAR</button>
                         </figcaption>
                     </figure>
                     <figure class="venda_produto">
@@ -184,7 +211,8 @@
                         <figcaption>
                             <p class="nome_produto">Joelheira Penalty Indoor V Preta</p>
                             <p class="valor_produto">R$89,90 <span class="parcela_produto">(10x de R$8,99)</span></p>
-                            <p>10% de desconto com PIX</p>
+                            <p>5% de desconto com PIX</p>
+                            <button class="button-comprar">COMPRAR</button>
                         </figcaption>
                     </figure>
                     <figure class="venda_produto">
@@ -193,28 +221,45 @@
                             <p class="nome_produto">Tênis Asics Gel-Rebound Preto</p>
                             <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
                             <p>XX% de desconto com PIX</p>
-                            
+                            <button class="button-comprar">COMPRAR</button>
                         </figcaption>
                     </figure>
                     <!-- Inserir elemento surpresa [RIGHT] -->
                 </section>
                 <section class="produtos-section">
-                    <h3>Basquete</h3>
+                    <!-- <h3>Basquete</h3> -->
                     <!-- Inserir elemento surpresa [LEFT] -->
                     <figure class="venda_produto">
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                        <img src="https://static.netshoes.com.br/produtos/bola-basquete-adidas-3-listras/20/3ZP-9534-120/3ZP-9534-120_zoom1.jpg?ts=1657565929&ims=544x" alt="Bola Basquete Adidas 3 Listras - Preto+Dourado" height="300px">
+                        <figcaption>
+                            <p class="nome_produto">Bola Basquete Adidas 3 Listras - Preto+Dourado</p>
+                            <p class="valor_produto">R$99,99 <span class="parcela_produto">ou 3x de R$33,33 sem juros</span></p>
+                            <button class="button-comprar">COMPRAR</button>
+                        </figcaption>
                     </figure>
                     <figure class="venda_produto">
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                        <img src="camiseta-lakers.png" alt="Regata Nike NBA Los Angeles Lakers Lebron James MVP - 2020" height="300px">
+                        <figcaption>
+                            <p class="nome_produto">Regata Nike NBA Los Angeles Lakers Lebron James MVP - 2020</p>
+                            <p class="valor_produto">R$249,90 <span class="parcela_produto">ou 10x de R$24,99 sem juros</span></p>
+                            <button class="button-comprar">COMPRAR</button>
+                        </figcaption>
                     </figure>
                     <figure class="venda_produto">
-                        <img src="#" alt="#">
-                        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</figcaption>
+                        <img src="https://static.netshoes.com.br/produtos/tenis-nike-precision-vi-masculino/26/2IC-7496-026/2IC-7496-026_zoom1.jpg?ts=1659115027&ims=544x" alt="Tênis Nike Precision VI Masculino - Preto+Branco" height="300px">
+                        <figcaption>
+                            <p class="nome_produto">Tênis Nike Precision VI Masculino - Preto+Branco</p>
+                            <p class="valor_produto">R$359,99 <span class="parcela_produto">ou 12x de R$30,00 sem juros</span></p>
+                            <button class="button-comprar">COMPRAR</button>
+                        </figcaption>
                     </figure>
                     <!-- Inserir elemento surpresa [RIGHT] -->
                 </section>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Compras</h2>
             </article>
         </section>
     </main>
