@@ -32,182 +32,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/logo-sportsshop.png" type="image/x-icon">
-    <style>
-
-        /* ATENÇÃO! O uso do CSS interno é PROIBIDO! TRANSCREVA para CSS inline! 
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        */
-
-        header {
-            display: flex;
-            border-bottom: 1px solid rgba(217, 217, 217);
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            background-color: rgb(247 247 247);
-            padding: 0.5rem;
-        }
-
-        nav {
-            display: inline;
-        }
-
-        nav > ul {
-            list-style: none;
-            color: #f60;
-            display: inline;
-            font-weight: bold;
-        }
-        
-        nav ul li {
-            display: inline-flex;
-            justify-content: space-between;
-            margin: 0 3rem;
-            text-decoration: none;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #f60;
-        }
-        
-        header button {
-            background-color: rgb(247, 152, 63);
-            border: none;
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.25rem;
-            color: white;
-            font-weight: bold;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: rgb(59, 59, 59); 
-            color: white;
-            padding: 0.125rem;
-            text-align: center;
-        }
-
-        section.produtos-section {
-            /* background-color: rgba(0, 0, 0, 0.171); */
-            padding: 3rem;
-            margin: 1rem 0;
-            display: flex;
-            /* justify-content: space-evenly; */
-            justify-content: center;
-            align-items: center;
-        }
-
-        h1, h3 {
-            font-size: 1.25rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-        }
-
-        h4 {
-            font-size: 1rem;
-        }
-
-        figure.venda_produto {
-            background-color: #00000041;
-            border-radius: 0.5rem;
-            padding: 1.5rem 1rem;
-            width: 300px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        p.nome_produto {
-            font-weight: bold;
-            display: block;
-            font-size: 1.25rem;
-            margin: 0.5rem 0;
-        }
-
-        p.valor_produto {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: darkgreen;
-            margin: 1rem 0;
-        }
-
-        span.parcela_produto {
-            font-size: 0.75rem;
-            color: rgb(95, 95, 95);
-        }
-
-        button.button-comprar {
-            padding: 0.75rem 5rem;
-            background-color: darkgreen;
-            border: none;
-            border-radius: 0.5rem;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-            width: 80%;
-            text-align: center;
-        }
-
-        figcaption {
-            margin: 0.5em 0;
-        }
-
-        input#pesquisa-produto {
-            width: 100%;
-            height: 40px;
-            border-radius: 0.5rem;
-            background-color: rgb(255, 255, 255);
-            font-size: 1rem;
-            color: rgb(26, 26, 26);
-            padding-inline: 36px;
-            text-transform: lowercase;
-            display: flex;
-            border: 1px solid gray;
-            background: #fff url(assets/magnifying-glass-solid.svg) no-repeat 300px center;
-            background-size: 16px;
-        }
-
-        section#carrinho {
-            padding: 6rem;
-        }
-
-        input#quantidade {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-        }
-
-        input#carrinho-quantidade {
-            width: 30px;
-            height: 24px;
-        }
-        
-        img.button-nav {
-            cursor: pointer;            
-        }
-
-        figure.carrinho-item {
-            display: flex;
-        }
-
-
-        figcaption.carrinho-detalhamento {
-            margin-inline: 2rem;
-        }
-
-        button.carrinho-option {
-            /* padding: 0.5rem; */
-            width: 30px;
-            height: 30px;
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif; font-size: 0.85rem;">
+<body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif;">
     <header>
         <img src="assets/logo-sportsshop.png" alt="SportsShop" height="50px" style="display: flex;">
         <nav>
@@ -241,7 +68,7 @@
                             <figcaption>
                                 <p class="nome_produto">Chuteira Futebol Campo Penalty Bravo XXII</p>
                                 <p class="valor_produto">R$139,90 <span class="parcela_produto">ou 5x de R$27,98 sem juros</span></p>
-                                <input type="number" name="quantidade-chuteira" id="quantidade" value="0">
+                                <input type="number" name="quantidade-chuteira" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -250,7 +77,7 @@
                             <figcaption>
                                 <p class="nome_produto">Luva de Goleiro Three Starts Touch Preta</p>
                                 <p class="valor_produto">R$249,90 à vista <span class="parcela_produto">ou 10x de R$24,90 sem juros</span></p>
-                                <input type="number" name="quantidade-luva" id="quantidade" value="0">
+                                <input type="number" name="quantidade-luva" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -259,8 +86,7 @@
                             <figcaption>
                                 <p class="nome_produto">Uniforme Esportivo com camisa modelo Milan Vermelho</p>
                                 <p class="valor_produto">R$239,90 à vista <span class="parcela_produto">ou 10x de R$23,90 sem juros</span></p>
-                                <p>XX% de desconto com PIX</p>
-                                <input type="number" name="quantidade-uniforme" id="quantidade" value="0">
+                                <input type="number" name="quantidade-uniforme" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -275,7 +101,7 @@
                                 <p class="nome_produto">Bola vôlei Mikasa MVA 200</p>
                                 <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
                                 <p>XX% de desconto com PIX</p>
-                                <input type="number" name="quantidade-bola-volei" id="quantidade" value="0">
+                                <input type="number" name="quantidade-bola-volei" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -285,7 +111,7 @@
                                 <p class="nome_produto">Joelheira Penalty Indoor V Preta</p>
                                 <p class="valor_produto">R$89,90 <span class="parcela_produto">(10x de R$8,99)</span></p>
                                 <p>5% de desconto com PIX</p>
-                                <input type="number" name="quantidade-joelheira" id="quantidade" value="0">
+                                <input type="number" name="quantidade-joelheira" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -295,7 +121,7 @@
                                 <p class="nome_produto">Tênis Asics Gel-Rebound Preto</p>
                                 <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
                                 <p>XX% de desconto com PIX</p>
-                                <input type="number" name="quantidade-tenis" id="quantidade" value="0">
+                                <input type="number" name="quantidade-tenis" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -309,7 +135,7 @@
                             <figcaption>
                                 <p class="nome_produto">Bola Basquete Adidas 3 Listras - Preto+Dourado</p>
                                 <p class="valor_produto">R$99,99 <span class="parcela_produto">ou 3x de R$33,33 sem juros</span></p>
-                                <input type="number" name="quantidade-bola-basquete" id="quantidade" value="0">
+                                <input type="number" name="quantidade-bola-basquete" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -318,7 +144,7 @@
                             <figcaption>
                                 <p class="nome_produto">Regata Nike NBA Los Angeles Lakers Lebron James MVP - 2020</p>
                                 <p class="valor_produto">R$249,90 <span class="parcela_produto">ou 10x de R$24,99 sem juros</span></p>
-                                <input type="number" name="quantidade-regata" id="quantidade" value="0">
+                                <input type="number" name="quantidade-regata" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -327,7 +153,7 @@
                             <figcaption>
                                 <p class="nome_produto">Tênis Nike Precision VI Masculino - Preto+Branco</p>
                                 <p class="valor_produto">R$359,99 <span class="parcela_produto">ou 12x de R$30,00 sem juros</span></p>
-                                <input type="number" name="quantidade-tenis" id="quantidade" value="0">
+                                <input type="number" name="quantidade-tenis" id="quantidade" value="0" min="0">
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -342,12 +168,28 @@
                 <figure class="carrinho-item">
                     <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="100px">
                     <figcaption class="carrinho-detalhamento">
-                        <h4>Joelheira Penalty Indoor V Preta</h4>
+                        <h4 class="titulo-produto">Joelheira Penalty Indoor V Preta</h4>
+                        <p class="valor-total-produto">R$179,80</p>
+                        <p class="valor-produto">R$89,90</p>
                         <button class="carrinho-option">+</button>
-                        <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="0">
+                        <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="2" min="0">
                         <button class="carrinho-option">-</button>
                     </figcaption>
                 </figure>
+                <figure class="carrinho-item">
+                    <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="100px">
+                    <figcaption class="carrinho-detalhamento">
+                        <h4 class="titulo-produto">Uniforme Esportivo com camisa modelo Milan Vermelho</h4>
+                        <p class="valor-total-produto">R$239,90</p>
+                        <p class="valor-produto">R$239,90</p> 
+                        <button class="carrinho-option">+</button>
+                        <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="1" min="0">
+                        <button class="carrinho-option">-</button>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="total-compra">
+                <h3>Subtotal</h3>
             </article>
         </section>
     </main>
