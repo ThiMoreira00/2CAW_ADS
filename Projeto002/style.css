@@ -6,6 +6,8 @@
 /* 
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     ATENÇÃO! O uso do CSS externo é PROIBIDO! TRANSCREVA para CSS inline! 
+
+    https://templates.mailchimp.com/resources/inline-css/
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 */
 
@@ -235,7 +237,7 @@ fieldset.frete {
     border: none;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 
@@ -256,3 +258,7 @@ input.cupom {
 input.input {
     padding: 0.5rem 1rem;
 }
+
+/* input {
+    padding: 0.5rem 1rem;
+} */
