@@ -163,7 +163,7 @@ img.button-nav {
 
 figure.carrinho-item {
     display: flex;
-    width: 40%;
+    width: 70%;
 }
 
 
@@ -175,14 +175,29 @@ button.carrinho-option {
     /* padding: 0.5rem; */
     width: 30px;
     height: 30px;
-    background-color: darkorange;
     border: none;
     border-radius: 4px;
     color: white;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
+    background-color: darkorange;
 }
+
+button.cancelar-produto {
+    background-color: #8b0000c4;
+    width: 23px;
+    height: 22px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 0.85rem;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    
+}
+
 
 button.retirar-produto {
     text-decoration: none;
@@ -198,6 +213,13 @@ article.total-compra {
     margin: 2.5rem;
 }
 
+article.total-compra > p {
+    float: right;
+    margin-left: 3rem;
+    display: inline;
+    align-items: center;
+}
+
 
 .valor-total-produto, .titulo-produto {
     display: inline;
@@ -205,4 +227,32 @@ article.total-compra {
 
 .valor-total-produto {
     text-align: end;
+    color: gray;
+}
+
+
+fieldset.frete {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+fieldset.fieldset-cupom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+input.cupom {
+    padding: 0.5rem 1rem;
+    /* padding: 0.45rem 0.5rem; */
+    display: block;
+    margin: 0.5rem 0;
+    width: 250px;
+}
+
+input.input {
+    padding: 0.5rem 1rem;
 }
