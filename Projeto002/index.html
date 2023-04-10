@@ -163,34 +163,51 @@
             </article>
         </section>
         <section id="carrinho">
-            <h2>Carrinho</h2>
-            <article>
-                <figure class="carrinho-item">
-                    <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="100px">
-                    <figcaption class="carrinho-detalhamento">
-                        <h4 class="titulo-produto">Joelheira Penalty Indoor V Preta</h4>
-                        <p class="valor-total-produto">R$179,80</p>
-                        <p class="valor-produto">R$89,90</p>
-                        <button class="carrinho-option">+</button>
-                        <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="2" min="0">
-                        <button class="carrinho-option">-</button>
-                    </figcaption>
-                </figure>
-                <figure class="carrinho-item">
-                    <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="100px">
-                    <figcaption class="carrinho-detalhamento">
-                        <h4 class="titulo-produto">Uniforme Esportivo com camisa modelo Milan Vermelho</h4>
-                        <p class="valor-total-produto">R$239,90</p>
-                        <p class="valor-produto">R$239,90</p> 
-                        <button class="carrinho-option">+</button>
-                        <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="1" min="0">
-                        <button class="carrinho-option">-</button>
-                    </figcaption>
-                </figure>
-            </article>
-            <article class="total-compra">
-                <h3>Subtotal</h3>
-            </article>
+            <form action="#">
+                <h2>Carrinho</h2>
+                <article>
+                    <figure class="carrinho-item">
+                        <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="100px">
+                        <figcaption class="carrinho-detalhamento">
+                            <button class="cancelar-produto">X</button>
+                            <h4 class="titulo-produto">Joelheira Penalty Indoor V Preta</h4>
+                            <p class="valor-total-produto">R$179,80</p>
+                            <p class="valor-produto">R$89,90</p>
+                            <button class="carrinho-option">+</button>
+                            <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="2" min="0">
+                            <button class="carrinho-option">-</button>
+                        </figcaption>
+                    </figure>
+                    <figure class="carrinho-item">
+                        <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="100px">
+                        <figcaption class="carrinho-detalhamento">
+                            <button class="cancelar-produto">X</button>
+                            <h4 class="titulo-produto">Uniforme Esportivo com camisa modelo Milan Vermelho</h4>
+                            <p class="valor-total-produto">R$239,90</p>
+                            <p class="valor-produto">R$239,90</p>
+                            <button class="carrinho-option">+</button>
+                            <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="1" min="0">
+                            <button class="carrinho-option">-</button>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="total-compra">
+                    <h3 style="display: inline;">Subtotal</h3>
+                    <p style="display: inline;">R$418,80</p>
+
+                    <fieldset class="frete">
+                        <label for="cep">Calcule frete e prazo</label>
+                        <input type="text" name="cep" placeholder="CEP" class="input" style="margin: 0.5rem 0; width: 20%;">
+                    </fieldset>
+                    <fieldset class="fieldset-cupom" style="border: none;">
+                        <label for="cupom">Deseja adicionar um cupom?</label>
+                        <input type="text" name="cupom" class="cupom input">
+                        
+                    </fieldset>
+
+                        <input type="submit" value="Finalizar compra" style="color: white; font-weight: bold; padding: 0.5rem 1rem;background-color: darkgreen; border: 2px solid green; border-radius: 4px; width: 55%;">
+                </article>
+            </form>
         </section>
     </main>
     <footer>
