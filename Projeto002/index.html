@@ -49,20 +49,25 @@
         <button>Faça login</button>
     </header>
     <main>
-        <section>
-            <article style="padding: 6rem;">
-                <h2>SportsShop</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</p>
+        <section style="display: flex;">
+            <article style="padding: 6rem; width: 40%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                <h2 style="font-size: 2rem;">SportsShop</h2>
+                <p>Bem-vindo! Temos tudo o que você precisa, desde equipamentos para atividades ao ar livre até roupas e acessórios para exercícios físicos.</p>
             </article>
+            <article style="padding: 6rem; width: 40%; display: flex; justify-content: flex-end; margin-right: 5rem;">
+                <img width="300px" src="https://lideresesportivos.com.br/wp-content/uploads/2021/11/ilustracao-iemais-1024x1024.png" alt="Pessoas praticando esporte">
+            </article>
+        </section>
+        <section>
             <article>
                 <form action="#">
                     <section style="padding-left: 9rem;">
                         <h2>Produtos</h2>
                         <p>Confira aqui nossos produtos</p>
                     </section>
+                    <h2 style="text-align: center;">Futebol</h2>
                     <section class="produtos-section">
-                        <!-- <h3>Futebol</h3> -->
-                        <img src="assets/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
+                        <img src="assets/icons/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
                         <figure class="venda_produto">
                             <img src="https://images.tcdn.com.br/img/img_prod/213069/chuteira_futebol_campo_penalty_bravo_xxi_12575_1_d3ef116614757a4e0e30c6c2c125797f.jpg" alt="Chuteira Futebol Campo Penalty Bravo XXII" height="300px">
                             <figcaption>
@@ -90,11 +95,12 @@
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
-                        <img src="assets/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
+                        <img src="assets/icons/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
                     </section>
+                    <h2 style="text-align: center;">Vôlei</h2>
                     <section class="produtos-section">
-                        <!-- <h3>Vôlei</h3> -->
-                        <img src="assets/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
+                        
+                        <img src="assets/icons/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
                         <figure class="venda_produto">
                             <img src="https://images.tcdn.com.br/img/img_prod/452589/bola_volei_mikasa_mva_200_1712_3_20180614144928.jpg" alt="Bola vôlei Mikasa MVA 200" height="300px">
                             <figcaption>
@@ -125,11 +131,12 @@
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
-                        <img src="assets/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
+                        <img src="assets/icons/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
                     </section>
+                    <h2 style="text-align: center;">Basquete</h2>
                     <section class="produtos-section">
-                        <!-- <h3>Basquete</h3> -->
-                        <img src="assets/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
+                        
+                        <img src="assets/icons/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
                         <figure class="venda_produto">
                             <img src="https://static.netshoes.com.br/produtos/bola-basquete-adidas-3-listras/20/3ZP-9534-120/3ZP-9534-120_zoom1.jpg?ts=1657565929&ims=544x" alt="Bola Basquete Adidas 3 Listras - Preto+Dourado" height="300px">
                             <figcaption>
@@ -157,7 +164,7 @@
                                 <button class="button-comprar">COMPRAR</button>
                             </figcaption>
                         </figure>
-                        <img src="assets/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
+                        <img src="assets/icons/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
                     </section>
                 </form>
             </article>
@@ -191,85 +198,106 @@
                         </figcaption>
                     </figure>
                 </article>
+
+                <article class="finalizacao-compra" style="display: flex;">
+                    
+                        <fieldset class="frete" style="width: 50%; margin-top: 2rem;">
+                            <h3>Endereço de cobrança</h3>
+                            <label for="cep">CEP <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="cep" placeholder="CEP" class="input" style="margin: 0.5rem 0 1.5rem; width: 200px;">
+                            <!--
+                                nome do destinatário
+                                cep
+                                numero
+                                endereço
+                                complemento
+                                referência
+                                bairro
+                                cidade
+                                estado
+                            -->
+                    
+                            <label for="endereço">Endereço <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="endereço" placeholder="Endereço" id="" style="width: 500px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                            <label for="numero">Número <span class="item-obrigatorio">*</span></label>
+                            <input type="number" name="numero" placeholder="Número" id="" style="width: 200px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" name="complemento" placeholder="Complemento" id="" style="width: 300px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                            <label for="bairro">Bairro <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="bairro" placeholder="Bairro" id="" style="width: 400px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                            <label for="cidade">Cidade <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="cidade" placeholder="Cidade" id="" style="width: 400px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                            <label for="estado">Estado <span class="item-obrigatorio">*</span></label>
+                            <select name="estado" style="width: 300px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                                <option value="RJ">Rio de Janeiro (RJ)</option>
+                                <option value="SP">São Paulo (SP)</option>
+                                <option value="AC">Acre (AC)</option>
+                                <option value="AL">Alagoas (AL)</option>
+                                <option value="AP">Amapá (AP)</option>
+                                <option value="AM">Amazonas (AM)</option>
+                                <option value="BA">Bahia (BA)</option>
+                                <option value="CE">Ceará (CE)</option>
+                                <option value="DF">Distrito Federal (DF)</option>
+                                <option value="ES">Espírito Santo (ES)</option>
+                                <option value="GO">Goiás (GO)</option>
+                                <option value="MA">Maranhão (MA)</option>
+                                <option value="MT">Mato Grosso (MT)</option>
+                                <option value="MS">Mato Grosso do Sul (MS)</option>
+                                <option value="MG">Minas Gerais (MG)</option>
+                                <option value="PA">Pará (PA)</option>
+                                <option value="PB">Paraíba (PB)</option>
+                                <option value="PR">Paraná (PR)</option>
+                                <option value="PE">Pernambuco (PE)</option>
+                                <option value="PI">Piauí (PI)</option>
+                                <option value="RN">Rio Grande do Norte (RN)</option>
+                                <option value="RS">Rio Grande do Sul (RS)</option>
+                                <option value="RO">Rondônia (RO)</option>
+                                <option value="RR">Roraima (RR)</option>
+                                <option value="SC">Santa Catarina (SC)</option>
+                                <option value="SE">Sergipe (SP)</option>
+                                <option value="TO">Tocantins (TO)</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="pagamento" style="width: 50%; margin-top: 2rem;">
+                            <h3>Pagamento</h3>
+                            <label for="metodo-pagamento">Método de pagamento <span class="item-obrigatorio">*</span></label>
+
+                            <select name="metodo-pagamento" style="width: 300px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                                <option value="Cartão de crédito">Cartão de crédito (Visa/Mastercard)</option>
+                                <option value="Cartão de débito">Cartão de débito (Visa/Mastercard)</option>
+                                <option value="Boleto">Boleto bancário</option>
+                                <option value="PIX">PIX</option>
+                            </select>
+
+                            <label for="nome-completo">Nome completo <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="nome-completo" style="width: 600px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+
+                            <label for="CPF-CNPJ">CPF/CNPJ <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="CPF-CNPJ" maxlength="14" size="11" style="width: 400px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+
+                            <label for="numero-cartao">Número do cartão <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="numero-cartao" maxlength="16" size="12" style="width: 400px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+
+                            <label for="validade">Data de validade <span class="item-obrigatorio">*</span></label>
+                            <input type="month" name="validade" style="width: 300px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+
+                            <label for="cvv">CVV <span class="item-obrigatorio">*</span></label>
+                            <input type="text" name="cvv" maxlength="3" size="3" style="width: 100px; margin: 0.5rem 0 1.5rem; padding: 0.5rem 1rem;">
+                        </fieldset>
+                    
+                            
+                </article>
                 <article class="total-compra">
                     <h3 style="display: inline;">Subtotal</h3>
-                    <p style="display: inline;">R$418,80</p>
-
-                    <fieldset class="frete">
-                        <label for="cep">Calcule frete e prazo</label>
-                        <input type="text" name="cep" placeholder="CEP" class="input" style="margin: 0.5rem 0; width: 20%;">
-
-                        <!-- 
-
-                            nome do destinatário
-                            cep
-                            numero
-                            endereço
-                            complemento
-                            referência
-                            bairro
-                            cidade
-                            estado 
-
-                        -->
-                        
-                        <label for="endereço">Endereço</label>
-                        <input type="text" name="endereço" id="">
-
-                        <label for="numero">Número</label>
-                        <input type="number" name="numero" id="">
-
-                        <label for="complemento">Complemento</label>
-                        <input type="text" name="complemento" id="">
-
-                        <label for="bairro">Bairro</label>
-                        <input type="text" name="bairro" id="">
-
-                        <label for="cidade">Cidade</label>
-                        <input type="text" name="cidade" id="">
-
-                        <label for="estado">Estado</label>
-                        <select name="estado" id="">
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="AC">Acre (AC)</option>
-                            <option value="AL">Alagoas (AL)</option>
-                            <option value="AP">Amapá (AP)</option>
-                            <option value="AM">Amazonas (AM)</option>
-                            <option value="BA">Bahia (BA)</option>
-                            <option value="CE">Ceará (CE)</option>
-                            <option value="DF">Distrito Federal (DF)</option>
-                            <option value="ES">Espírito Santo (ES)</option>
-                            <option value="GO">Goiás (GO)</option>
-                            <option value="MA">Maranhão (MA)</option>
-                            <option value="MT">Mato Grosso (MT)</option>
-                            <option value="MS">Mato Grosso do Sul (MS)</option>
-                            <option value="MG">Minas Gerais (MG)</option>
-                            <option value="PA">Pará (PA)</option>
-                            <option value="PB">Paraíba (PB)</option>
-                            <option value="PR">Paraná (PR)</option>
-                            <option value="PE">Pernambuco (PE)</option>
-                            <option value="PI">Piauí (PI)</option>
-                            <option value="RN">Rio Grande do Norte (RN)</option>
-                            <option value="RS">Rio Grande do Sul (RS)</option>
-                            <option value="RO">Rondônia (RO)</option>
-                            <option value="RR">Roraima (RR)</option>
-                            <option value="SC">Santa Catarina (SC)</option>
-                            <option value="SE">Sergipe (SP)</option>
-                            <option value="TO">Tocantins (TO)</option>
-                            
-
-                        </select>
-
-                    </fieldset>
-                    <fieldset class="fieldset-cupom" style="border: none;">
+                    <p style="display: inline; font-size: 1.3rem; margin: 0; ">R$418,80</p>
+                
+                    <fieldset class="fieldset-cupom" style="border: none; padding-left: 0;">
                         <label for="cupom">Deseja adicionar um cupom?</label>
                         <input type="text" name="cupom" class="cupom input">
                         
                     </fieldset>
-
-                        <input type="submit" value="Finalizar compra" style="color: white; font-weight: bold; padding: 0.5rem 1rem;background-color: darkgreen; border: 2px solid green; border-radius: 4px; width: 55%;">
                 </article>
+                <input type="submit" value="Finalizar compra" style="color: white; font-weight: bold; padding: 0.5rem 1rem; background-color: darkgreen; border: 2px solid green; border-radius: 4px; width: 500px; cursor: pointer;">
             </form>
         </section>
     </main>
