@@ -139,12 +139,12 @@ input#pesquisa-produto {
     text-transform: lowercase;
     display: flex;
     border: 1px solid gray;
-    background: #fff url(assets/magnifying-glass-solid.svg) no-repeat 300px center;
+    background: #fff url(assets/icons/magnifying-glass-solid.svg) no-repeat 300px center;
     background-size: 16px;
 }
 
 section#carrinho {
-    padding: 6rem;
+    padding: 9rem;
 }
 
 input#quantidade {
@@ -212,7 +212,8 @@ button.retirar-produto {
 }
 
 article.total-compra {
-    margin: 2.5rem;
+    margin: 0.5rem;
+    width: 30%;
 }
 
 article.total-compra > p {
@@ -233,7 +234,7 @@ article.total-compra > p {
 }
 
 
-fieldset.frete {
+fieldset.frete, fieldset.pagamento {
     border: none;
     display: flex;
     flex-direction: column;
@@ -262,3 +263,7 @@ input.input {
 /* input {
     padding: 0.5rem 1rem;
 } */
+
+span.item-obrigatorio {
+    color: red;
+}
