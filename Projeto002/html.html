@@ -1,20 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html><!-- 
+    ATIVIDADE 1 - AV1:
+    Individualmente cada aluno deve montar 1 página única para exposição e venda de produtos esportivos ou instrumentos musicais (o que lhe interessar mais) que contenha:
+
+        - cabeçalho e rodapé
+        - uma tabela de preços e produtos
+        - um formulário para compras dos produtos
+        - no mínimo, uma imagem sobre o assunto do produto
+        - usar 1 vídeo ou 1 áudio, no mínimo
+        - Estilo usando APENAS CSS inline
+        - Permitido uso de Google Fonts (seguindo orientações de aula)
+
+
+        Será avaliada a criatividade. Não pode usar Lorem Ipsum; o texto deve de fato estar relacionado ao conteúdo da página.
+
+        Páginas iguais (mesmo conteúdo e apresentação, com pequenas alterações de fontes e cores) terão a pontuação dividida entre as partes iguais.
+
+
+        IMPORTANTE:
+            - Modelo de nomeação dos arquivos: nomeAluno_matricula_TrabAv1.html
+            - Se tiver mais de um arquivo: compactar tudo e enviar um único documento (nomeAluno_matricula.rar ou nomeAluno_matricula.zip)
+--><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-
-        a:hover {
-            color: green;
-        }
-        
-    </style>
+    <title>SportsShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo-sportsshop.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-<body>
-    <h1>Teste de CSS interno</h1>
-    <a href="#">Clique aqui!</a>
-</body>
-</html>
+<body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif;">
+    <header>
+        <img src="assets/logo-sportsshop.png" alt="SportsShop" height="50px" style="display: flex;">
+        <nav>
+            <!-- <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul> -->
+            <!-- <img src="assets/magnifying-glass-solid.svg" alt="Ícone de pesquisa" height="20px"> -->
+            <input type="text" name="" id="pesquisa-produto" placeholder="O que você procura hoje?">
+        </nav>
+        <button>Faça login</button>
+    </header>
+    <main>
+        <section>
+            <article style="padding: 6rem;">
+                <h2>SportsShop</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione consectetur porro dolor corporis, amet maxime iusto recusandae, laboriosam sequi ex adipisci placeat nesciunt accusamus modi illo corrupti, iste nisi.</p>
+            </article>
+            <article>
+                <form action="#">
+                    <section style="padding-left: 9rem;">
+                        <h2>Produtos</h2>
+                        <p>Confira aqui nossos produtos</p>
+                    </section>
+                    <section class="produtos-section">
+                        <!-- <h3>Futebol</h3> -->
+                        <img src="assets/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
+                        <figure class="venda_produto">
+                            <img src="https://images.tcdn.com.br/img/img_prod/213069/chuteira_futebol_campo_penalty_bravo_xxi_12575_1_d3ef116614757a4e0e30c6c2c125797f.jpg" alt="Chuteira Futebol Campo Penalty Bravo XXII" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Chuteira Futebol Campo Penalty Bravo XXII</p>
+                                <p class="valor_produto">R$139,90 <span class="parcela_produto">ou 5x de R$27,98 sem juros</span></p>
+                                <input type="number" name="quantidade-chuteira" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <figure class="venda_produto">
+                            <img src="https://images.tcdn.com.br/img/img_prod/213069/luva_de_goleiro_three_stars_touch_preta_12236_4_232e31e54e1d6d27d6cd8f3e5cc15c34.jpg" alt="Luva de Goleiro Three Starts Touch Preta" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Luva de Goleiro Three Starts Touch Preta</p>
+                                <p class="valor_produto">R$249,90 à vista <span class="parcela_produto">ou 10x de R$24,90 sem juros</span></p>
+                                <input type="number" name="quantidade-luva" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <figure class="venda_produto">
+                            <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Uniforme Esportivo com camisa modelo Milan Vermelho</p>
+                                <p class="valor_produto">R$239,90 à vista <span class="parcela_produto">ou 10x de R$23,90 sem juros</span></p>
+                                <input type="number" name="quantidade-uniforme" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <img src="assets/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
+                    </section>
+                    <section class="produtos-section">
+                        <!-- <h3>Vôlei</h3> -->
+                        <img src="assets/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
+                        <figure class="venda_produto">
+                            <img src="https://images.tcdn.com.br/img/img_prod/452589/bola_volei_mikasa_mva_200_1712_3_20180614144928.jpg" alt="Bola vôlei Mikasa MVA 200" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Bola vôlei Mikasa MVA 200</p>
+                                <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
+                                <p>XX% de desconto com PIX</p>
+                                <input type="number" name="quantidade-bola-volei" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <figure class="venda_produto">
+                            <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Joelheira Penalty Indoor V Preta</p>
+                                <p class="valor_produto">R$89,90 <span class="parcela_produto">(10x de R$8,99)</span></p>
+                                <p>5% de desconto com PIX</p>
+                                <input type="number" name="quantidade-joelheira" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <figure class="venda_produto">
+                            <img src="https://static3.tcdn.com.br/img/img_prod/311840/tenis_asics_gel_rebound_preto_109925_3_b5f5766fa88cd9b939dcdc5832119544.jpg" alt="Tênis Asics Gel-Rebound Preto" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Tênis Asics Gel-Rebound Preto</p>
+                                <p class="valor_produto">R$XXX,XX <span class="parcela_produto">(XXx de R$XXX,XX)</span></p>
+                                <p>XX% de desconto com PIX</p>
+                                <input type="number" name="quantidade-tenis" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <img src="assets/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
+                    </section>
+                    <section class="produtos-section">
+                        <!-- <h3>Basquete</h3> -->
+                        <img src="assets/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav">
+                        <figure class="venda_produto">
+                            <img src="https://static.netshoes.com.br/produtos/bola-basquete-adidas-3-listras/20/3ZP-9534-120/3ZP-9534-120_zoom1.jpg?ts=1657565929&amp;ims=544x" alt="Bola Basquete Adidas 3 Listras - Preto+Dourado" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Bola Basquete Adidas 3 Listras - Preto+Dourado</p>
+                                <p class="valor_produto">R$99,99 <span class="parcela_produto">ou 3x de R$33,33 sem juros</span></p>
+                                <input type="number" name="quantidade-bola-basquete" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <figure class="venda_produto">
+                            <img src="assets/camiseta-lakers.png" alt="Regata Nike NBA Los Angeles Lakers Lebron James MVP - 2020" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Regata Nike NBA Los Angeles Lakers Lebron James MVP - 2020</p>
+                                <p class="valor_produto">R$249,90 <span class="parcela_produto">ou 10x de R$24,99 sem juros</span></p>
+                                <input type="number" name="quantidade-regata" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <figure class="venda_produto">
+                            <img src="https://static.netshoes.com.br/produtos/tenis-nike-precision-vi-masculino/26/2IC-7496-026/2IC-7496-026_zoom1.jpg?ts=1659115027&amp;ims=544x" alt="Tênis Nike Precision VI Masculino - Preto+Branco" height="300px">
+                            <figcaption>
+                                <p class="nome_produto">Tênis Nike Precision VI Masculino - Preto+Branco</p>
+                                <p class="valor_produto">R$359,99 <span class="parcela_produto">ou 12x de R$30,00 sem juros</span></p>
+                                <input type="number" name="quantidade-tenis" id="quantidade" value="0" min="0">
+                                <button class="button-comprar">COMPRAR</button>
+                            </figcaption>
+                        </figure>
+                        <img src="assets/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav">
+                    </section>
+                </form>
+            </article>
+        </section>
+        <section id="carrinho">
+            <form action="#">
+                <h2>Carrinho</h2>
+                <article>
+                    <figure class="carrinho-item">
+                        <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="100px">
+                        <figcaption class="carrinho-detalhamento">
+                            <button class="cancelar-produto">X</button>
+                            <h4 class="titulo-produto">Joelheira Penalty Indoor V Preta</h4>
+                            <p class="valor-total-produto">R$179,80</p>
+                            <p class="valor-produto">R$89,90</p>
+                            <button class="carrinho-option">+</button>
+                            <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="2" min="0">
+                            <button class="carrinho-option">-</button>
+                        </figcaption>
+                    </figure>
+                    <figure class="carrinho-item">
+                        <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="100px">
+                        <figcaption class="carrinho-detalhamento">
+                            <button class="cancelar-produto">X</button>
+                            <h4 class="titulo-produto">Uniforme Esportivo com camisa modelo Milan Vermelho</h4>
+                            <p class="valor-total-produto">R$239,90</p>
+                            <p class="valor-produto">R$239,90</p>
+                            <button class="carrinho-option">+</button>
+                            <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="1" min="0">
+                            <button class="carrinho-option">-</button>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="total-compra">
+                    <h3 style="display: inline;">Subtotal</h3>
+                    <p style="display: inline;">R$418,80</p>
+                    <fieldset class="fieldset-cupom" style="border: none;">
+                        <label for="cupom">Deseja adicionar um cupom?</label>
+                        <input type="text" name="cupom" class="cupom input">
+                        <input type="submit" value="Finalizar compra" style="color: white; font-weight: bold; padding: 0.5rem 1rem;background-color: darkgreen; border: 2px solid green; border-radius: 4px; width: 55%;">
+                    </fieldset>
+                </article>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <!-- Inserir mais dados para contato -->
+        <p>Copyright 2023 © Todos os direitos reservados</p>
+    </footer>
+
+</body></html>
