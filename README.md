@@ -5,8 +5,10 @@ Repositório destinado às atividades e avaliações práticas da matéria Const
 ## Projeto002 - Página de exposição e venda de produtos esportivos
 
 * Lista de coisas para serem feitas
-- [ ] Sobre a página
+- [x] Sobre a página
 - [x] Produtos
-- [ ] Carrinho
-- [ ] Completar pedido
-- [ ] Footer
+- [x] Carrinho
+- [x] Completar pedido
+- [ ] Tabela
+- [ ] Vídeo
+- [ ] Footer (opcional)
