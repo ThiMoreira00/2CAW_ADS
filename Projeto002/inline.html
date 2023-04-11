@@ -33,26 +33,14 @@
     <link rel="shortcut icon" href="assets/logo-sportsshop.png" type="image/x-icon">
 </head>
 <body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif;">
-    <header style="display: flex;border-bottom: 1px solid rgba(217, 217, 217);flex-direction: row;align-items: center;justify-content: space-evenly;background-color: rgb(247 247 247);padding: 0.5rem;">
+    <header style="display: flex; border-bottom: 1px solid rgba(217, 217, 217); flex-direction: row; align-items: center; justify-content: space-evenly; background-color: rgb(247 247 247); padding: 0.5rem;">
         <img src="assets/logo-sportsshop.png" alt="SportsShop" height="50px" style="display: flex;">
         <nav style="display: inline;">
-            
-            <input type="text" name="" id="pesquisa-produto" placeholder="O que você procura hoje?" style="width: 100%;height: 40px;border-radius: 0.5rem;background-color: rgb(255, 255, 255);font-size: 1rem;color: rgb(26, 26, 26);padding-inline: 36px;text-transform: lowercase;display: flex;border: 1px solid gray;background: #fff url(assets/icons/magnifying-glass-solid.svg) no-repeat 300px center;background-size: 16px;">
+            <input type="text" name="pesquisa" id="pesquisa-produto" placeholder="O que você procura hoje?" style="width: 100%; height: 40px; border-radius: 0.5rem; background-color: rgb(255, 255, 255); font-size: 1rem; color: rgb(26, 26, 26); padding-inline: 36px; text-transform: lowercase; display: flex; border: 1px solid gray; background: #fff url(assets/icons/magnifying-glass-solid.svg) no-repeat 300px center; background-size: 16px;">
         </nav>
         <nav style="display: inline;">
-            <button class="login-button" style="background: rgb(247, 152, 63) url(assets/icons/right-to-bracket-solid.png) no-repeat 7px center; background-size: 16px;
-            border: 2px solid orange;
-            padding: 0.5rem 1rem 0.5rem 2rem;
-            border-radius: 0.25rem;
-            color: white;
-            font-weight: bold;
-            display: inline-block;
-            cursor: pointer;">Faça login</button>
-            <button class="cadastrar" style="color: black; border: none; background-color: initial; padding: 0.75rem 1.25rem;
-            color: black;
-            font-weight: bold;
-            display: inline-block;
-            cursor: pointer;">Cadastrar</button>
+            <button class="login-button" style="background: rgb(247, 152, 63) url(assets/icons/right-to-bracket-solid.png) no-repeat 7px center; background-size: 16px; border: 2px solid orange; padding: 0.5rem 1rem 0.5rem 2rem; border-radius: 0.25rem; color: white; font-weight: bold; display: inline-block; cursor: pointer;">Faça login</button>
+            <button class="cadastrar" style="color: black; border: none; background-color: initial; padding: 0.75rem 1.25rem; color: black; font-weight: bold; display: inline-block; cursor: pointer;">Cadastrar</button>
         </nav>
     </header>
     <main>
@@ -67,64 +55,70 @@
         </section>
         <section>
             <article>
-                <form action="#">
-                    </form></article></section><section style="padding-left: 9rem;">
-                        <h2 style="font-size: 1.5rem;">Produtos</h2>
-                        <p>Confira aqui nossos produtos</p>
+                <form action="#" method="POST">
+                    <section class="promocao" style="padding: 3rem 9rem; display: flex; background-color:rgba(247, 152, 63, 0.336);">
+                        <article style="display: flex; flex-direction: column;">
+                            <h3 style="font-size: 1.3rem;">Promoção relâmpago</h3>
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_812697-MLB54712359227_032023-O.webp" alt="https://http2.mlstatic.com/D_NQ_NP_812697-MLB54712359227_032023-O.webp" width="300px">
+                            <p class="nome_produto" style="font-weight: bold; display: block; font-size: 1.25rem; margin: 0.5rem 0;">Boia Banana Boat Inflável Jet Bob 2 Pessoas Nautika</p>
+                            <p class="valor_produto" style="font-size: 1.25rem; font-weight: bold; color: darkgreen; margin: 1rem 0;">R$1059,90 <span class="parcela_produto" style="font-size: 0.75rem; color: rgb(95, 95, 95);">ou 10x de R$105,99 sem juros</span></p>
+                            <input type="number" name="quantidade-chuteira"  value="0" min="0" style="width: 30px; height: 30px;text-align: center;">
+                            <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 70%;text-align: center;">COMPRAR</button>
+                        </article>
+                        <iframe style="display: inline-flex; margin-left: 5rem;" width="560" height="315" src="https://www.youtube.com/embed/-9IjhA4MSDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </section>
                     <h2 style="text-align: center;font-size: 1.5rem;">Futebol</h2>
-                    <section class="produtos-section" style="padding: 3rem;margin: 1rem 0;display: flex;justify-content: center;align-items: center;">
+                    <section class="produtos-section" style="padding: 3rem; margin: 1rem 0; display: flex; justify-content: center; align-items: center;">
                         <img src="assets/icons/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav" style="cursor: pointer;">
-                        <figure class="venda_produto" style="background-color: #00000041;border-radius: 0.5rem;padding: 1.5rem 1rem;width: 300px;display: flex;flex-wrap: wrap;">
+                        <figure class="venda_produto" style="background-color: #00000041; border-radius: 0.5rem; padding: 1.5rem 1rem; width: 300px; display: flex; flex-wrap: wrap;">
                             <img src="https://images.tcdn.com.br/img/img_prod/213069/chuteira_futebol_campo_penalty_bravo_xxi_12575_1_d3ef116614757a4e0e30c6c2c125797f.jpg" alt="Chuteira Futebol Campo Penalty Bravo XXII" height="300px">
                             <figcaption style="margin: 0.5em 0;">
-                                <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Chuteira Futebol Campo Penalty Bravo XXII</p>
-                                <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$139,90 <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">ou 5x de R$27,98 sem juros</span></p>
-                                <input type="number" name="quantidade-chuteira" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
-                                <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
+                                <p class="nome_produto" style="font-weight: bold; display: block; font-size: 1.25rem; margin: 0.5rem 0;">Chuteira Futebol Campo Penalty Bravo XXII</p>
+                                <p class="valor_produto" style="font-size: 1.25rem; font-weight: bold; color: darkgreen; margin: 1rem 0;">R$139,90 <span class="parcela_produto" style="font-size: 0.75rem; color: rgb(95, 95, 95);">ou 5x de R$27,98 sem juros</span></p>
+                                <input type="number" name="quantidade-chuteira"  value="0" min="0" style="width: 30px; height: 30px; text-align: center;">
+                                <button class="button-comprar" style="padding: 0.75rem 5rem; background-color: darkgreen; border: 2px solid green; border-radius: 0.5rem; font-weight: bold; color: white; cursor: pointer; width: 80%; text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
-                        <figure class="venda_produto" style="background-color: #00000041;border-radius: 0.5rem;padding: 1.5rem 1rem;width: 300px;display: flex;flex-wrap: wrap;">
+                        <figure class="venda_produto" style="background-color: #00000041; border-radius: 0.5rem; padding: 1.5rem 1rem; width: 300px; display: flex; flex-wrap: wrap;">
                             <img src="https://images.tcdn.com.br/img/img_prod/213069/luva_de_goleiro_three_stars_touch_preta_12236_4_232e31e54e1d6d27d6cd8f3e5cc15c34.jpg" alt="Luva de Goleiro Three Starts Touch Preta" height="300px">
                             <figcaption style="margin: 0.5em 0;">
-                                <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Luva de Goleiro Three Starts Touch Preta</p>
-                                <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$249,90 à vista <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">ou 10x de R$24,90 sem juros</span></p>
-                                <input type="number" name="quantidade-luva" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
-                                <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
+                                <p class="nome_produto" style="font-weight: bold; display: block; font-size: 1.25rem; margin: 0.5rem 0;">Luva de Goleiro Three Starts Touch Preta</p>
+                                <p class="valor_produto" style="font-size: 1.25rem; font-weight: bold; color: darkgreen; margin: 1rem 0;">R$249,90 à vista <span class="parcela_produto" style="font-size: 0.75rem; color: rgb(95, 95, 95);">ou 10x de R$24,90 sem juros</span></p>
+                                <input type="number" name="quantidade-luva"  value="0" min="0" style="width: 30px; height: 30px; text-align: center;">
+                                <button class="button-comprar" style="padding: 0.75rem 5rem; background-color: darkgreen; border: 2px solid green; border-radius: 0.5rem; font-weight: bold; color: white; cursor: pointer; width: 80%; text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
-                        <figure class="venda_produto" style="background-color: #00000041;border-radius: 0.5rem;padding: 1.5rem 1rem;width: 300px;display: flex;flex-wrap: wrap;">
+                        <figure class="venda_produto" style="background-color: #00000041; border-radius: 0.5rem; padding: 1.5rem 1rem; width: 300px; display: flex; flex-wrap: wrap;">
                             <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="300px">
                             <figcaption style="margin: 0.5em 0;">
                                 <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Uniforme Esportivo com camisa modelo Milan Vermelho</p>
-                                <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$239,90 à vista <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">ou 10x de R$23,90 sem juros</span></p>
-                                <input type="number" name="quantidade-uniforme" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
-                                <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
+                                <p class="valor_produto" style="font-size: 1.25rem; font-weight: bold; color: darkgreen; margin: 1rem 0;">R$239,90 à vista <span class="parcela_produto" style="font-size: 0.75rem; color: rgb(95, 95, 95);">ou 10x de R$23,90 sem juros</span></p>
+                                <input type="number" name="quantidade-uniforme"  value="0" min="0" style="width: 30px; height: 30px; text-align: center;">
+                                <button class="button-comprar" style="padding: 0.75rem 5rem; background-color: darkgreen; border: 2px solid green; border-radius: 0.5rem; font-weight: bold; color: white; cursor: pointer; width: 80%; text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
                         <img src="assets/icons/circle-chevron-right-solid.svg" alt="Botão direito" height="35px" class="button-nav" style="cursor: pointer;">
                     </section>
                     <h2 style="text-align: center;font-size: 1.5rem;">Vôlei</h2>
-                    <section class="produtos-section" style="padding: 3rem;margin: 1rem 0;display: flex;justify-content: center;align-items: center;">
+                    <section class="produtos-section" style="padding: 3rem; margin: 1rem 0; display: flex; justify-content: center; align-items: center;">
                         
                         <img src="assets/icons/circle-chevron-left-solid.svg" alt="Botão esquerdo" height="35px" class="button-nav" style="cursor: pointer;">
-                        <figure class="venda_produto" style="background-color: #00000041;border-radius: 0.5rem;padding: 1.5rem 1rem;width: 300px;display: flex;flex-wrap: wrap;">
+                        <figure class="venda_produto" style="background-color: #00000041; border-radius: 0.5rem; padding: 1.5rem 1rem; width: 300px; display: flex; flex-wrap: wrap;">
                             <img src="https://images.tcdn.com.br/img/img_prod/452589/bola_volei_mikasa_mva_200_1712_3_20180614144928.jpg" alt="Bola vôlei Mikasa MVA 200" height="300px">
                             <figcaption style="margin: 0.5em 0;">
-                                <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Bola vôlei Mikasa MVA 200</p>
-                                <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$XXX,XX <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">(XXx de R$XXX,XX)</span></p>
-                                <p>XX% de desconto com PIX</p>
-                                <input type="number" name="quantidade-bola-volei" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
-                                <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
+                                <p class="nome_produto" style="font-weight: bold; display: block; font-size: 1.25rem; margin: 0.5rem 0;">Bola vôlei Mikasa MVA 200</p>
+                                <p class="valor_produto" style="font-size: 1.25rem; font-weight: bold; color: darkgreen; margin: 1rem 0;">R$399,90 <span class="parcela_produto" style="font-size: 0.75rem; color: rgb(95, 95, 95);">(10x de R$39,90)</span></p>
+                                <input type="number" name="quantidade-bola-volei" value="0" min="0" style="width: 30px; height: 30px;text-align: center;">
+                                <button class="button-comprar" style="padding: 0.75rem 5rem; background-color: darkgreen; border: 2px solid green; border-radius: 0.5rem; font-weight: bold; color: white; cursor: pointer; width: 80%; text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
-                        <figure class="venda_produto" style="background-color: #00000041;border-radius: 0.5rem;padding: 1.5rem 1rem;width: 300px;display: flex;flex-wrap: wrap;">
+                        <figure class="venda_produto" style="background-color: #00000041; border-radius: 0.5rem; padding: 1.5rem 1rem; width: 300px; display: flex;flex-wrap: wrap;">
                             <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="300px">
                             <figcaption style="margin: 0.5em 0;">
                                 <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Joelheira Penalty Indoor V Preta</p>
                                 <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$89,90 <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">(10x de R$8,99)</span></p>
                                 <p>5% de desconto com PIX</p>
-                                <input type="number" name="quantidade-joelheira" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
+                                <input type="number" name="quantidade-joelheira"  value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
                                 <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -133,7 +127,7 @@
                             <figcaption style="margin: 0.5em 0;">
                                 <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Tênis Asics Gel-Rebound Preto</p>
                                 <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$399,90 <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">(10x de R$39,90)</span></p>
-                                <input type="number" name="quantidade-tenis" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
+                                <input type="number" name="quantidade-tenis"  value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
                                 <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -148,7 +142,7 @@
                             <figcaption style="margin: 0.5em 0;">
                                 <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Bola Basquete Adidas 3 Listras - Preto+Dourado</p>
                                 <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$99,99 <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">ou 3x de R$33,33 sem juros</span></p>
-                                <input type="number" name="quantidade-bola-basquete" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
+                                <input type="number" name="quantidade-bola-basquete"  value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
                                 <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -157,7 +151,7 @@
                             <figcaption style="margin: 0.5em 0;">
                                 <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Regata Nike NBA Los Angeles Lakers Lebron James MVP - 2020</p>
                                 <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$249,90 <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">ou 10x de R$24,99 sem juros</span></p>
-                                <input type="number" name="quantidade-regata" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
+                                <input type="number" name="quantidade-regata"  value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
                                 <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -166,7 +160,7 @@
                             <figcaption style="margin: 0.5em 0;">
                                 <p class="nome_produto" style="font-weight: bold;display: block;font-size: 1.25rem;margin: 0.5rem 0;">Tênis Nike Precision VI Masculino - Preto+Branco</p>
                                 <p class="valor_produto" style="font-size: 1.25rem;font-weight: bold;color: darkgreen;margin: 1rem 0;">R$359,99 <span class="parcela_produto" style="font-size: 0.75rem;color: rgb(95, 95, 95);">ou 12x de R$30,00 sem juros</span></p>
-                                <input type="number" name="quantidade-tenis" id="quantidade" value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
+                                <input type="number" name="quantidade-tenis"  value="0" min="0" style="width: 30px;height: 30px;text-align: center;">
                                 <button class="button-comprar" style="padding: 0.75rem 5rem;background-color: darkgreen;border: 2px solid green;border-radius: 0.5rem;font-weight: bold;color: white;cursor: pointer;width: 80%;text-align: center;">COMPRAR</button>
                             </figcaption>
                         </figure>
@@ -179,7 +173,7 @@
             <form action="#">
                 <h2 style="font-size: 1.5rem;">Carrinho</h2>
                 <article>
-                    <figure class="carrinho-item" style="display: flex;width: 70%;">
+                    <!-- <figure class="carrinho-item" style="display: flex;width: 70%;">
                         <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="100px">
                         <figcaption class="carrinho-detalhamento" style="margin: 0.5em 0;margin-inline: 2rem;">
                             <button class="cancelar-produto" style="background-color: #8b0000c4;width: 23px;height: 22px;text-align: center;font-weight: normal;font-size: 0.85rem;padding: 0;border: none;border-radius: 4px;color: white;">X</button>
@@ -201,7 +195,56 @@
                             <button class="carrinho-option" style="width: 30px;height: 30px;border: none;border-radius: 4px;color: white;font-weight: bold;font-size: 1rem;cursor: pointer;background-color: darkorange;">+</button>
                             <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="1" min="0" style="width: 30px;height: 24px;text-align: center;">
                             <button class="carrinho-option" style="width: 30px;height: 30px;border: none;border-radius: 4px;color: white;font-weight: bold;font-size: 1rem;cursor: pointer;background-color: darkorange;">-</button>
-                        
+                        -->
+
+                        <table>
+                            <tr>
+                              <th>Produto</th>
+                              <th>Quantidade</th>
+                              <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure class="carrinho-item" style="display: flex;width: 70%;">
+                                        <img src="https://static3.tcdn.com.br/img/img_prod/719636/joelheira_penalty_indoor_v_preta_31_1_20201214002726.jpg" alt="Joelheira Penalty Indoor V Preta" height="100px">
+                                        <figcaption class="carrinho-detalhamento" style="margin: 0.5em 0;margin-inline: 2rem;">
+                                            <button class="cancelar-produto" style="background-color: #8b0000c4;width: 23px;height: 22px;text-align: center;font-weight: normal;font-size: 0.85rem;padding: 0;border: none;border-radius: 4px;color: white;">X</button>
+                                            <h4 class="titulo-produto" style="font-size: 1rem;display: inline;">Joelheira Penalty Indoor V Preta</h4>
+                                            <p class="valor-produto">R$89,90</p>
+                                        </figcaption>
+                                    </figure>
+                                    
+                                    </td>
+                                <td>
+                                    <button class="carrinho-option" style="width: 30px;height: 30px;border: none;border-radius: 4px;color: white;font-weight: bold;font-size: 1rem;cursor: pointer;background-color: darkorange;">+</button>
+                                    <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="2" min="0" style="width: 30px;height: 24px;text-align: center;">
+                                    <button class="carrinho-option" style="width: 30px;height: 30px;border: none;border-radius: 4px;color: white;font-weight: bold;font-size: 1rem;cursor: pointer;background-color: darkorange;">-</button>
+                                </td>
+                                <td>
+                                    <p class="valor-total-produto" style="display: inline;text-align: end;color: gray;">R$179,80</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <figure class="carrinho-item" style="display: flex;width: 70%;">
+                                        <img src="https://images.tcdn.com.br/img/img_prod/354638/58_1_20160729142718.jpg" alt="Uniforme Esportivo com camisa modelo Milan Vermelho" height="100px">
+                                        <figcaption class="carrinho-detalhamento" style="margin: 0.5em 0;margin-inline: 2rem;">
+                                            <button class="cancelar-produto" style="background-color: #8b0000c4;width: 23px;height: 22px;text-align: center;font-weight: normal;font-size: 0.85rem;padding: 0;border: none;border-radius: 4px;color: white;">X</button>
+                                            <h4 class="titulo-produto" style="font-size: 1rem;display: inline;">Uniforme Esportivo com camisa modelo Milan Vermelho</h4>
+                                        </figcaption>
+                                    </figure>
+                                </td>
+                                <td>
+                                    <button class="carrinho-option" style="width: 30px;height: 30px;border: none;border-radius: 4px;color: white;font-weight: bold;font-size: 1rem;cursor: pointer;background-color: darkorange;">+</button>
+                                    <input type="number" name="quantidade-joelheira" id="carrinho-quantidade" value="1" min="0" style="width: 30px;height: 24px;text-align: center;">
+                                    <button class="carrinho-option" style="width: 30px;height: 30px;border: none;border-radius: 4px;color: white;font-weight: bold;font-size: 1rem;cursor: pointer;background-color: darkorange;">-</button>
+                                </td>
+
+                                <td>
+                                    <p class="valor-total-produto" style="display: inline;text-align: end;color: gray;">R$239,90</p>
+                                </td>
+                            </tr>
+                          </table>
                     
                 
 
