@@ -9,6 +9,5 @@ Repositório destinado às atividades e avaliações práticas da matéria Const
 - [x] Produtos
 - [x] Carrinho
 - [x] Completar pedido
-- [ ] Tabela
-- [ ] Vídeo
-- [ ] Footer (opcional)
+- [x] Tabela
+- [x] Vídeo
