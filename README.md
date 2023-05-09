@@ -3,7 +3,9 @@ Repositório destinado às atividades e avaliações práticas da matéria Const
 
 
 
-## Projeto001 - Página de exposição e venda de produtos musicais
+## Módulo 01 - HTML & CSS
+
+### Projeto001 - Página de exposição e venda de produtos musicais
 * Lista de coisas para serem feitas
 - [ ] Sobre a página
 - [x] Produtos
@@ -12,9 +14,7 @@ Repositório destinado às atividades e avaliações práticas da matéria Const
 - [ ] Tabela
 - [ ] Vídeo
 
-
-## Projeto002 - Página de exposição e venda de produtos esportivos
-
+### Projeto002 - Página de exposição e venda de produtos esportivos
 * Lista de coisas para serem feitas
 - [x] Sobre a página
 - [x] Produtos
@@ -22,3 +22,10 @@ Repositório destinado às atividades e avaliações práticas da matéria Const
 - [x] Completar pedido
 - [x] Tabela
 - [x] Vídeo
+
+
+## Módulo 02 - JavaScript
+
+* Exercícios
+- Exercício001 - Funções apresentadas
+- Exercício002 - Prática: Formulário usando window.prompt
