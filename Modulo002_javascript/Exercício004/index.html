@@ -1,0 +1,30 @@
+<!--
+
+    EXERCÍCIO 04 - Utilizando eventos em JS
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício004 | JavaScript</title>
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo" onclick="this.style.color = 'red';this.innerHTML += ' (só que vermelho)'">Bem-vindo!</h1>
+    <p>Clique no título para pintá-lo de vermelho!</p>
+
+        <h2 id="carinho-gatinho">Faça carinho em mim!</h2>
+        <img src="https://i.pinimg.com/originals/60/cd/ff/60cdff33a7c7d255fb8ec3c153f4ccd8.png" alt="" onmouseover="document.getElementById('carinho-gatinho').innerHTML = 'Obrigado! *-*'" onmouseout="document.getElementById('carinho-gatinho').innerHTML = 'Faça carinho em mim!'" width="150px">
+
+    <!-- Chamando o arquivo JS -->
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
