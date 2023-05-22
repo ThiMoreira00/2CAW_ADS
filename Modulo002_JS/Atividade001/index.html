@@ -1,0 +1,23 @@
+<!-- 
+
+    ATIVIDADE 01 - JAVASCRIPT:
+
+    1) Para esta tarefa, você precisará de duas imagens do mesmo tamanho. Adicione uma imagem a esta página usando uma tag html <img>. Usando os manipuladores de eventos onMouseOver() e onMouseOut(), tente fazer a imagem mudar para a segunda imagem quando o ponteiro do mouse passar sobre ela e, em seguida, voltar para a primeira imagem quando o ponteiro do mouse for movido para fora da imagem.
+
+    2) Escolha uma das páginas já criadas nas aulas de 2CAW e implemente uma alteração de propriedade CSS através de um script / uma função Javascript. Utilize o material de aula e/ou o site da W3School para ver as possibilidades.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade01 | Javascript</title>
+</head>
+<body>
+    <h1>Lâmpada</h1>
+    <img src="lampada-apagada.png" alt="" onmouseover="this.src = 'lampada-acesa.png'" onmouseout="this.src = 'lampada-apagada.png'">
+</body>
+</html>

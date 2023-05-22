@@ -1,0 +1,86 @@
+<!-- 
+
+    MÓDULO 2 - JAVASCRIPT
+    Exercícios de Aprendizado
+
+    FUNÇÕES UTILIZADAS (HTML):
+        onload -> executar algo quando a tag for carregada
+
+    FUNÇÕES UTILIZADAS (JS):
+        window.alert("XXX") -> exibir mensagem de alerta
+        console.log("XXX") -> exibir mensagem no console
+        document.getElementById("xxx") -> selecionar elemento com o id "xxx"
+        document.write("xxx") -> inserir código HTML no documento, SOBRESCREVENDO o conteúdo
+        .innerHTML = "xxx" -> inserir código HTML no elemento selecionado, SOBRESCREVENDO o conteúdo
+        .toFixed(X) -> exibir X casas decimais de um número, arredondando se necessário
+        .toPrecision(X) -> exibir X algarismos de um número, arredondando se necessário
+        window.confirm("XXX") -> exibir mensagem de confirmação (alerta, com botões 'Ok' e 'Cancel')
+        window.prompt("XXX") -> exibir mensagem de inserir (com um campo de texto para poder ser adicionado)
+            window.prompt("XXX", "XXX") -> exibir mensagem de inserir (com um espaço para algum valor default)
+        
+
+    TEORIAS UTILIZADAS:
+        - chamadas de um código JS [interno, externo]
+        - variáveis [let, var]
+        - funções [function nome() { ... }]
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2 | JavaScript</title>
+
+    <!-- Código INTERNO em JavaScript -->
+    <script type="text/javascript">
+
+        // Exibindo uma mensagem de alerta no site
+        window.alert("Interrompendo carregamento...");
+
+        // Exibindo mensagem no console
+        console.log("Verificando se a mensagem apareceu no console. Apareceu?");
+
+        // Criando função chamada printar, sem parâmetros
+        function printar() {
+
+            //window.alert e alert é a mesma coisa
+            alert("Olá, mundo! (só que agora fazendo dentro de uma função)");
+        }
+
+    </script>
+</head>
+<!-- Parâmetro onload = quando carregar... -->
+<body onload="printar()">
+    <p id="id-paragrafo"></p>
+    <section id="lugar">Modificando o conteúdo com JavaScript</section>
+
+    <script type="text/javascript">
+        
+        // Criando uma variável. A variável está selecionando o elemento com o id "id-paragrafo"
+        let paragrafo = document.getElementById('id-paragrafo');
+        
+        // Inserindo valor no HTML para a variável
+        lugar.innerHTML = "<strong>Olá, mundo!</strong>";
+        
+    </script>
+
+    <!-- Código EXTERNO em JavaScript
+    <script src="main.js" type="text/javascript"></script> -->
+
+    <script type="text/javascript">
+        
+            var doc = document.getElementById("lugar");
+            doc.innerHTML = "<h1>Oi Turma!!!</h1>";
+            doc.innerHTML = doc.innerHTML + "<ol>Aprenderemos:"; // cria lista
+            doc.innerHTML = doc.innerHTML + "<li>Variaveis</li>"; // opção 1
+            doc.innerHTML = doc.innerHTML + "<li>Tipos de Dados</li> "; // opção 2
+            doc.innerHTML = doc.innerHTML + "<li>Entrada e Saida</li>";//opção 3
+            doc.innerHTML = doc.innerHTML + "</ol>"; // Finalização da lista
+        
+    </script>
+
+</body>
+</html>

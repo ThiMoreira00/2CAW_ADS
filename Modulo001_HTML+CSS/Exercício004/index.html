@@ -1,0 +1,61 @@
+<!-- 
+
+    EXERCÍCIO 3 - 25 DE ABRIL DE 2023
+    Atividades:
+
+    - Usando o arquivo em anexo, crie um estilo para a página usando CSS interno;
+    - Agora crie um arquivo CSS externo que crie estilos novos para dois elementos/classes/pseudoclasses/pseudoelementos que foram estilizados anteriormente. Acrescente algo novo também nesse arquivo;
+    - Insira o arquivo externo no documento html. Primeiro insira antes da definição do CSS interno e verifique o comportamento da página. Depois altere a entrada do arquivo externo para depois das definições do CSS interno. O estilo muda? Justifique
+    - Altere as características da lista. Faça uma lista ter estilo diferente da outra.
+
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercicio HTML/CSS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+
+            /*
+                NOTA DO ALUNO:
+                Dependendo da localização da chamada para o CSS externo, os valores dos atributos podem alterar.
+
+            */
+            p.destaque {
+                text-align: center;
+                width: 700px;
+                position: relative;
+                top: 3rem;
+                margin-inline: auto;
+                display: block;
+                /* margin: 3remn ; */
+                margin-bottom: 3rem;
+                color: rgb(61, 139, 103);
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>Doces Sonhos</header>
+		<p class="destaque">Venha conhecer a loja dos sonhos de todo confeiteiro e amante de doces! Temos várias opções de doces para pronto consumo como equipamentos e matéria prima para a sua produção! Atendemos todo o Brasil em nossa loja online e temos também loja física no Rio de Janeiro.</p>
+		<ul> Utensílios / Equipamentos: 
+			<li> <img src="https://a-static.mlcdn.com.br/800x560/enrolador-de-doces-brigadeirinha-bicolor-12g-confeitaria-doces-massas-pasta-americana-blue-star/danchef/067658ceb2d811eda95e4201ac185019/379ad3d1c7511fae3249be5856770e26.jpeg"><span class="detalhe-produto">Enrolador de doces 12g - R$ 59,00 </span></li>
+			<li> <img src="https://a-static.mlcdn.com.br/800x560/cortador-nivelador-bolo-4-espatula-do-confeiteiro-kit-carving-studio/carvingstudioltda/7734000183/0275388e404bad519aed083082df17ba.jpg"> <span class="detalhe-produto">Cortador Nivelador Bolo + 4 Espatula do Confeiteiro - R$ 35,00 </span></li>
+			<li> <img src="https://festsonho.com.br/images/products/7896641340567_1.jpg"> <span class="detalhe-produto">100 unidades de Forminhas Gourmet No. 5 vermelho - R$ 5,00 </span></li>
+		</ul>
+		<p class="destaque"> Temos outros tipos de equipamentos como batedeiras, cortadores de biscoitos, placas de silicone, entre outros!
+		<ul> Matéria prima:
+			<li> <img src="https://images.tcdn.com.br/img/img_prod/655345/glace_real_1kg_mavalerio_1767_1_20200326132950.jpg"><span class="detalhe-produto"> Glacê Real 1kg - R$ 10,00 </span></li>
+			<li> <img src="https://http2.mlstatic.com/corante-em-gel-fab-comestivel-decoraco-confeitaria-cores-D_NQ_NP_849165-MLB26570065305_122017-F.jpg"><span class="detalhe-produto"> Corante em Gel Comestível - R$ 9,00</span></li>
+			<li> <img src="https://a-static.mlcdn.com.br/800x560/chocolate-melken-harald-ao-leite-1kg/casadasembalagenssaobento/55f1649c304911ecae134201ac185049/67fc8be27a70b517dbf6a34395babc9a.jpeg"> <span class="detalhe-produto">Chocolate Melken Harald ao Leite 1kg - R$ 42,00</span></li>
+		</ul>
+		<p> Além de matéria prima para a sua produção de bolos, tortas, biscoitos e o que mais desejar!</p>
+		<p> Nossos produtos para pronto consumo estão disponíveis em <a href="https://sodiedoces.com.br/doces/"> Sodiê Doces</a>.</p>
+		<p> Nossa loja física se situa no Shopping Downtown (Barra da Tijuca), mas atendemos todo o Brasil através de venda por WhatsApp. Entre em contato com nosso número (21) 99874-6655 e peça nosso catálogo.</p>
+		<footer>Av das Américas, 500 Bloco 6 Loja 124 - CEP 22640-904 - Barra da Tijuca - Rio de Janeiro</footer>
+	</body>
+</html>
