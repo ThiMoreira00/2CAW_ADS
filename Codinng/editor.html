@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codinng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div class="background">
+        <img src="assets/background/esfera1.png" alt="" class="backgroundSphere">
+        <img src="assets/background/esfera2.png" alt="" class="backgroundSphere">
+    </div>
+    <header>
+        <nav>
+            <h1>Codinng</h1>
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="codinng">
+            <form>
+                <textarea name="editor" id="editor" cols="70" rows="30"><pre><code class="language-plaintext"></code></pre></textarea>
+                
+                
+            </form>
+        </section>
+        <section id="preview">
+
+        </section>
+        <button>Atualizar</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        // first, find all the div.code blocks
+        document.querySelectorAll('textarea#editor').forEach(el => {
+        // then highlight each
+        hljs.highlightElement(el);
+        });
+    </script>
+</body>
+</html>
