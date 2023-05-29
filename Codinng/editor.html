@@ -33,13 +33,11 @@
     <main>
         <section id="codinng">
             <form>
-                <textarea name="editor" id="editor" cols="70" rows="30"><pre><code class="language-plaintext"></code></pre></textarea>
-                
-                
+                <textarea name="editor" id="editor" cols="70" rows="30" onkeyup="promptProgramar();"></textarea>
             </form>
         </section>
-        <section id="preview">
-
+        <section>
+            <div id="preview" style="background-color: white; color: black; "></div>
         </section>
         <button>Atualizar</button>
     </main>
@@ -53,5 +51,6 @@
         hljs.highlightElement(el);
         });
     </script>
+    <script src="src/main.js"></script>
 </body>
 </html>
