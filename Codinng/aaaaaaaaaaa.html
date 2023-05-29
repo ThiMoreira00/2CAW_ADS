@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codinng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleEditor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    /* border: 2px solid red; */
+}
+
+/* ESTRUTURA */
+body {
+    background-color: #0A0A0A;
+    padding-inline: 3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    padding: 3rem;
+    height: 500px;
+}
+
+main {
+    padding: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+nav, nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > ul > li {
+    display: flex;
+    margin-inline: 1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* TÍTULOS/CABEÇALHOS */
+h1, h2 {
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 16px;
+    font-family: 'Consolas', monospace;
+}
+
+h2#titulo {
+    margin-top: 7rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding-bottom: 1rem;
+}
+
+hr {
+    border: 2px solid rgb(31, 31, 31);
+    width: 50px;
+    margin: 0.5rem 0 1rem;
+}
+
+/* MARCAÇÕES */
+
+.active {
+    border-bottom: 2px solid blue;
+}
+
+.underline {
+    text-decoration: underline;  
+}
+
+button.buttonCTA, button.buttonRegistrar {
+    background-color: #1D51FE;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid #1D51FE;
+}
+
+button.buttonCTA {
+    margin-top: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #204cdd;
+    border-color: #204cdd;
+}
+
+.description {
+    color: gray;
+    font-size: 13px;
+}
+
+section#areaCTA {
+    width: 50%;
+}
+
+img.backgroundSphere {
+    position: fixed;
+    left: 0px;
+    z-index: -1;
+}
+
+
+    </style>
+</head>
+<body id="bodyEditor">
+    <div class="background">
+        <img src="assets/background/esfera1.png" alt="" class="backgroundSphere">
+        <img src="assets/background/esfera2.png" alt="" class="backgroundSphere">
+    </div>
+    <header id="headerEditor">
+        <nav id="navEditor">
+            <h1>Codinng</h1>
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="codinng">
+            <form>
+                <textarea name="editor" id="editor" cols="70" rows="30" onkeyup="promptProgramar();"></textarea>
+            </form>
+        </section>
+        <section>
+            <div id="preview" style="background-color: white; color: black; ">
+                <section id="preview-section" style="align-content: unset;
+                align-items: unset;
+                align-self: unset;
+                animation: unset;
+                appearance: unset;
+                backface-visibility: unset;
+                background-blend-mode: unset;
+                background: unset;
+                block-size: unset;
+                border-block-end: unset;
+                border-block-start: unset;
+                border-collapse: unset;
+                border-inline-end: unset;
+                border-inline-start: unset;
+                border-radius: unset;
+                border-spacing: unset;
+                border: unset;
+                bottom: unset;
+                box-align: unset;
+                box-decoration-break: unset;
+                box-direction: unset;
+                box-flex: unset;
+                box-ordinal-group: unset;
+                box-orient: unset;
+                box-pack: unset;
+                box-shadow: unset;
+                box-sizing: unset;
+                caption-side: unset;
+                clear: unset;
+                clip-path: unset;
+                clip-rule: unset;
+                clip: unset;
+                color-interpolation-filters: unset;
+                color: unset;
+                column-fill: unset;
+                column-gap: unset;
+                column-rule: unset;
+                columns: unset;
+                content: unset;
+                counter-increment: unset;
+                counter-reset: unset;
+                cursor: unset;
+                display: unset;
+                empty-cells: unset;
+                fill-opacity: unset;
+                fill-rule: unset;
+                fill: unset;
+                filter: unset;
+                flex-flow: unset;
+                flex: unset;
+                float: unset;
+                flood-color: unset;
+                flood-opacity: unset;
+                font-family: unset;
+                font-feature-settings: unset;
+                font-kerning: unset;
+                font-language-override: unset;
+                font-size-adjust: unset;
+                font-size: unset;
+                font-stretch: unset;
+                font-style: oblique;
+                font-synthesis: unset;
+                font-variant: unset;
+                font-weight: unset;
+                height: unset;
+                hyphens: unset;
+                image-orientation: unset;
+                image-rendering: unset;
+                ime-mode: unset;
+                inline-size: unset;
+                isolation: unset;
+                justify-content: unset;
+                justify-items: unset;
+                justify-self: unset;
+                left: unset;
+                letter-spacing: unset;
+                lighting-color: unset;
+                line-height: unset;
+                list-style: unset;
+                margin-block-end: unset;
+                margin-block-start: unset;
+                margin-inline-end: unset;
+                margin-inline-start: unset;
+                margin: unset;
+                marker: unset;
+                mask-type: unset;
+                mask: unset;
+                max-block-size: unset;
+                max-height: unset;
+                max-inline-size: unset;
+                max-width: unset;
+                min-block-size: unset;
+                min-height: unset;
+                min-inline-size: unset;
+                min-width: unset;
+                mix-blend-mode: unset;
+                object-fit: unset;
+                object-position: unset;
+                offset-block-end: unset;
+                offset-block-start: unset;
+                offset-inline-end: unset;
+                offset-inline-start: unset;
+                opacity: unset;
+                order: unset;
+                outline-offset: unset;
+                outline: unset;
+                overflow: unset;
+                padding-block-end: unset;
+                padding-block-start: unset;
+                padding-inline-end: unset;
+                padding-inline-start: unset;
+                padding: unset;
+                page-break-after: unset;
+                page-break-before: unset;
+                page-break-inside: unset;
+                paint-order: unset;
+                perspective-origin: unset;
+                perspective: unset;
+                pointer-events: unset;
+                position: unset;
+                quotes: unset;
+                resize: unset;
+                right: unset;
+                ruby-align: unset;
+                ruby-position: unset;
+                scroll-behavior: unset;
+                scroll-snap-coordinate: unset;
+                scroll-snap-destination: unset;
+                scroll-snap-points-x: unset;
+                scroll-snap-points-y: unset;
+                scroll-snap-type: unset;
+                shape-rendering: unset;
+                stop-color: unset;
+                stop-opacity: unset;
+                stroke-dasharray: unset;
+                stroke-dashoffset: unset;
+                stroke-linecap: unset;
+                stroke-linejoin: unset;
+                stroke-miterlimit: unset;
+                stroke-opacity: unset;
+                stroke-width: unset;
+                stroke: unset;
+                tab-size: unset;
+                table-layout: unset;
+                text-align-last: unset;
+                text-align: unset;
+                text-anchor: unset;
+                text-combine-upright: unset;
+                text-decoration: unset;
+                text-emphasis-position: unset;
+                text-emphasis: unset;
+                text-indent: unset;
+                text-orientation: unset;
+                text-overflow: unset;
+                text-rendering: unset;
+                text-shadow: unset;
+                text-size-adjust: unset;
+                text-transform: unset;
+                top: unset;
+                transform-origin: unset;
+                transform-style: unset;
+                transform: unset;
+                transition: unset;
+                user-select: unset;
+                vertical-align: unset;
+                visibility: unset;
+                white-space: unset;
+                width: unset;
+                will-change: unset;
+                word-break: unset;
+                word-spacing: unset;
+                word-wrap: unset;
+                writing-mode: unset;
+                z-index: unset;">
+                    
+                </section>
+            </div>
+        </section>
+        <button>Atualizar</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        // first, find all the div.code blocks
+        document.querySelectorAll('textarea#editor').forEach(el => {
+        // then highlight each
+        hljs.highlightElement(el);
+        });
+    </script>
+    <script src="src/main.js"></script>
+</body>
+</html>
