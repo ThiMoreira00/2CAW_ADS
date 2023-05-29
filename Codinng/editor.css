@@ -10,3 +10,12 @@ textarea {
     color: white;
     font-family: Consolas, 'Courier New', monospace;
 }
+
+#preview {
+    background-color: white;
+    border: 1rem solid white;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    font-family: Consolas, 'Courier New', monospace;
+}
