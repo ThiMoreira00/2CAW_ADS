@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codinng</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleEditor.css">
+    <!-- <link rel="stylesheet" href="styleEditor.css"> -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +16,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="editor.css">
+    <style>
+        header {
+            height: initial;
+        }
+    </style>
 </head>
 <body id="bodyEditor">
     <div class="background">
@@ -32,12 +39,12 @@
         </nav>
     </header>
     <main>
-        <section id="codinng">
+        <section id="codinng" style="display: inline-block;">
             <form>
                 <textarea name="editor" id="editor" cols="70" rows="30" onkeyup="promptProgramar();"></textarea>
             </form>
         </section>
-        <section>
+        <section style="display: inline-block; width: 40%;">
             <div id="preview" style="background-color: white; color: black; ">
                 <section id="preview-section" style="align-content: unset;
                 align-items: unset;
