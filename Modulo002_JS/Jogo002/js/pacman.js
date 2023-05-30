@@ -1,4 +1,3 @@
 var settings = {
-    velocidade = 25,
-    
+    velocidade: 25
 }
