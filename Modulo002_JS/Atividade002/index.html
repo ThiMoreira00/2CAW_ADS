@@ -1,0 +1,137 @@
+<!-- 
+    
+    ATIVIDADE 02: JAVASCRIPT
+    
+    1) Analise o código abaixo para atender as orientações a seguir:
+        1.1) Explique o que faz cada função scritpt
+        1.2) Crie uma nova função para cálculo de média artimética das notas;
+        1.3) Usando as orientações apresentadas em https://www.w3schools.com/js/js_validation.asp, implemente uma interação de validação;
+        1.4) Implemente estilo na página e depois crie alguma alteração nela através de JS;
+        1.5) Considerando a média de aprovação sendo 6,0 e usando o retorno da média ponderada, informe se o aluno foi aprovado ou não. 
+
+
+        ?????????????????????????????
+
+        Respostas - 1.1:
+        - calculaMedia(nota1, nota2, peso1, peso2) = calcula a média ponderada dos valores informados pelo formulário (passando as notas e os pesos das notas por parâmetro);
+        - limpaCampo(campo) = limpa o campo selecionado (passando o número do campo por parâmetro).
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">      
+        <title>Calcular Média</title>
+        <style>
+            body {
+                background-color: rgb(208, 252, 237);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            p.titulo {
+                font-weight: bold;
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            input {
+                display: block;
+            }
+
+            input.calcularMedia {
+                padding: 0.5rem 1rem;
+                border: 2px solid rgb(1, 83, 56);
+                background-color: rgb(1, 83, 56);
+                color: white;
+                font-weight: bold;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                display: inline-block;
+                margin-inline: 1rem;
+            }
+
+            input#calcularMedia:hover {
+                background-color: rgb(1, 65, 43);
+            }
+        </style>
+        <script type="text/javascript">
+
+               function calcularMedia(nota1, nota2, peso1, peso2) {
+
+                   if(validarRespostas() == 0) {
+                       var media = 0;
+                       media = (parseFloat(nota1*peso1) + parseFloat(nota2*peso2)) / (parseFloat(peso1) + parseFloat(peso2)); 
+
+
+                       if (media > 6) {
+                        document.form.situacao.value = "Aprovado!";
+                        document.getElementById("situacao").style.backgroundColor = "lightgreen";
+                        document.getElementById("situacao").style.color = "green";
+                       }
+                       else {
+                        document.form.situacao.value = "Reprovado!";
+                        document.getElementById("situacao").style.backgroundColor = "#fa7a7a";
+                        document.getElementById("situacao").style.color = "red";
+                       }
+                       return media;
+
+                   }
+               }
+
+               function limpaCampo(campo) {
+                    if(campo == 1) {
+                        document.form.nota1.value ="";    // Pega o valor do elemento com nome "nota1" no formulário
+                    }
+                    if(campo == 2) {
+                        document.getElementById("nota2").value= "";    // Pegando o valor pelo ID
+                    }
+                    if(campo == 3) {
+                        document.getElementById("peso1").value= ""; 
+                   }
+                    if(campo == 4) {
+                        document.getElementById("peso2").value = "";
+                   }
+               }
+
+               // Exercício 1.2
+               function calcularMediaAritmetica(nota1, nota2) {
+                    if(validarRespostas() == 0) {
+                        return ((parseFloat(nota1) + parseFloat(nota2))/2.0);
+                    }
+               }
+
+
+               // Exercício 1.3
+               function validarRespostas() {
+
+                    nota1 = document.getElementById("nota1").value;
+                    peso1 = document.getElementById("peso1").value;
+                    nota2 = document.getElementById("nota2").value;
+                    peso2 = document.getElementById("peso2").value;
+
+                    //
+                    if((nota1 == null || nota2 == null || peso1 == null || peso2 == null)) {
+                        alert("ERRO! Alguns campos não foram preenchidos corretamente.");
+                        return 1;
+
+                    } else {
+                        return 0;
+
+                    }
+               }
+         </script>
+   </head>
+   <body>
+        <p class="titulo">CALCULAR MÉDIA</p>
+       <form name="form">
+            <p>Nota 1: <input type="text" name="nota1" size="20" id="nota1" value="Digite nota 1" onfocus="limpaCampo(1);"></p>
+            <p>Nota 2: <input  type="text" name="nota2" size="20" id="nota2" value="Digite nota 2" onfocus="limpaCampo(2);"> </p>
+            <p>Peso Nota 1: <input  type="text" name="peso1" size="20" id="peso1" value="Digite peso prova 1" onfocus="limpaCampo(3);"> </p>
+            <p>Peso Nota 2: <input  type="text" name="peso2" size="20" id="peso2" value="Digite peso prova 2" onfocus="limpaCampo(4);"> </p>
+            <p>Media Final : <input type="text" id="mf" size="20" readonly ></p>
+            <p>Situação: <input type="text" id="situacao" size="20" name="situacao" readonly></p>
+            <input class="calcularMedia" type="button" value="Calcular (média ponderada)" onclick="this.form.mf.value =calcularMedia(this.form.nota1.value,this.form.nota2.value,this.form.peso1.value,this.form.peso2.value)" >
+            <input class="calcularMedia" type="button" value="Calcular (média aritmética)" onclick="this.form.mf.value = calcularMediaAritmetica(this.form.nota1.value,this.form.nota2.value)" >
+       </form>
+    </body>
+</html>
