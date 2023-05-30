@@ -1,7 +1,7 @@
 var Configuracao = {
-	velocidade: 300,
-	tempoEstrelaAtiva: 5000,
-	largura:15
+	velocidade: 70,
+	tempoEstrelaAtiva: 50000,
+	largura:16
 }
 
 
