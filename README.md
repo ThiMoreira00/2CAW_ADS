@@ -9,4 +9,4 @@ O módulo 1 apresentou pontos iniciais para o desenvolvimento web usando a lingu
 Principais tags:
 | Tag | Significado |
 | --------------- | ----------------------------|
-| <!DOCTYPE html> | Identificador de script em HTML5 |
+| <\!DOCTYPE html> | Identificador de script em HTML5 |
