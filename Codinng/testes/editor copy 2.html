@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codinng</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editor.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
+    <!-- <script>hljs.highlightAll();</script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.css">
+    <!-- <link rel="stylesheet" href="vscode-dark.css"> -->
+    <link rel="stylesheet" href="styleEdit.css">
+    <link rel="stylesheet" href="meu-tema.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- <link rel="stylesheet" href="editor.css"> -->
+    <style>
+        header {
+            height: initial;
+        }
+    </style>
+
+    
+    
+</head>
+<body id="bodyEditor">
+    <div class="background">
+        <img src="assets/background/esfera1.png" alt="" class="backgroundSphere">
+        <img src="assets/background/esfera2.png" alt="" class="backgroundSphere">
+    </div>
+    <header id="headerEditor">
+        <nav id="navEditor">
+            <h1 id="logo">Codinng</h1>
+            <ul>
+                <li><a href="index.html" class="active navMenu">Início</a></li>
+                <li><a href="about.html" class="navMenu">Sobre</a></li>
+                <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="mainEditor">
+        <section id="codinng" style="display: inline-block;">
+            <form>
+                <textarea name="editor" id="editor" cols="50" rows="20" onkeyup="promptProgramar();"></textarea>
+            </form>
+        </section>
+        <section style="display: inline-block; width: 40%;">
+            <div id="preview" style="background-color: white; color: black; ">
+                <section id="preview-section">
+                </section>
+            </div>
+        </section>
+        <button>Atualizar</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="src/main.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/editor.js"></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+            mode: "html",
+            lineNumbers: true,
+            // theme: "vscode-dark"
+            theme: "vscode-dark"
+        });
+    </script>
+</body>
+</html>
