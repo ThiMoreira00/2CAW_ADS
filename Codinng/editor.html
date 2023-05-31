@@ -5,23 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codinng</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="styleEditor.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="editor.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.css">
+    <link rel="stylesheet" href="styleEdit.css">
+    <!-- <link rel="stylesheet" href="meu-tema.css"> -->
+    <link rel="stylesheet" href="vscode-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/htmlmixed/htmlmixed.js"></script>
     <style>
         header {
             height: initial;
         }
     </style>
+
+    
+    
 </head>
 <body id="bodyEditor">
     <div class="background">
@@ -30,18 +33,18 @@
     </div>
     <header id="headerEditor">
         <nav id="navEditor">
-            <h1>Codinng</h1>
+            <h1 id="logo">Codinng</h1>
             <ul>
-                <li><a href="index.html" class="active">Início</a></li>
-                <li><a href="about.html">Sobre</a></li>
+                <li><a href="index.html" class="active navMenu">Início</a></li>
+                <li><a href="about.html" class="navMenu">Sobre</a></li>
                 <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="mainEditor">
         <section id="codinng" style="display: inline-block;">
             <form>
-                <textarea name="editor" id="editor" cols="70" rows="30" onkeyup="promptProgramar();"></textarea>
+                <textarea name="editor" id="editor" cols="50" rows="20" onkeyup="promptProgramar();"></textarea>
             </form>
         </section>
         <section style="display: inline-block; width: 40%;">
@@ -55,13 +58,16 @@
     <footer>
 
     </footer>
+    <script src="src/main.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/editor.js"></script>
     <script>
-        // first, find all the div.code blocks
-        document.querySelectorAll('textarea#editor').forEach(el => {
-        // then highlight each
-        hljs.highlightElement(el);
+        var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+            mode: "htmlmixed",
+            lineNumbers: true,
+            theme: "vscode-dark"
+            // theme: "meu-tema"
         });
     </script>
-    <script src="src/main.js"></script>
 </body>
 </html>
