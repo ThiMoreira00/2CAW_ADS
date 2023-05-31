@@ -3,12 +3,13 @@
     --vsc-dark-header-background: #3c3c3c;
 }
 
-textarea {
+textarea#editor {
     background-color: var(--vsc-dark-background);
     border: 1rem solid var(--vsc-dark-header-background);
     border-radius: 0.5rem;
     color: white;
     font-family: Consolas, 'Courier New', monospace;
+    font-size: 1.5rem;
 }
 
 #preview {
