@@ -4,28 +4,9 @@ Repositório destinado às atividades e avaliações práticas da matéria Const
 
 
 ## Módulo 01 - HTML & CSS
+O módulo 1 apresentou pontos iniciais para o desenvolvimento web usando a linguagem de marcação HTML (Hypertext Markup Language) e as folhas de estilo CSS (Cascading Style Sheets).
 
-### Projeto001 - Página de exposição e venda de produtos musicais
-* Lista de coisas para serem feitas
-- [ ] Sobre a página
-- [x] Produtos
-- [ ] Carrinho
-- [ ] Completar pedido
-- [ ] Tabela
-- [ ] Vídeo
-
-### Projeto002 - Página de exposição e venda de produtos esportivos
-* Lista de coisas para serem feitas
-- [x] Sobre a página
-- [x] Produtos
-- [x] Carrinho
-- [x] Completar pedido
-- [x] Tabela
-- [x] Vídeo
-
-
-## Módulo 02 - JavaScript
-
-* Exercícios
-- Exercício001 - Funções apresentadas
-- Exercício002 - Prática: Formulário usando window.prompt
+Principais tags:
+| Tag | Significado |
+| --------------- | ----------------------------|
+| <!DOCTYPE html> | Identificador de script em HTML5 |
