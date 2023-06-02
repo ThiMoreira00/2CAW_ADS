@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codinng</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- End of Google Fonts -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/editor.css">
+</head>
+<body id="bodyEditor">
+    <div class="background">
+        <img src="assets/img/esfera1.png" alt="" class="backgroundSphere">
+        <img src="assets/img/esfera2.png" alt="" class="backgroundSphere">
+    </div>
+    <header id="headerEditor">
+        <nav id="navEditor">
+            <h1 id="logo">Codinng</h1>
+            <ul>
+                <li><a href="index.html" class="active navMenu">Início</a></li>
+                <li><a href="about.html" class="navMenu">Sobre</a></li>
+                <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="mainEditor">
+        <section id="codinng">
+            <form>
+                <textarea name="editor" id="editor" cols="50" rows="20" onkeyup="promptProgramar();"></textarea>
+            </form>
+        </section>
+        <section id="preview">
+            <section id="preview-section" style="background-color: white; color: black; ">
+            </section>
+        </section>
+        <button id="updatePreview">Atualizar</button>
+    </main>
+    
+    <footer>
+
+    </footer>
+    <script>
+        
+    </script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/editor.js"></script>
+</body>
+</html>
