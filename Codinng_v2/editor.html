@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/editor.css">
+    
 </head>
 <body id="bodyEditor">
     <div class="background">
@@ -28,28 +29,29 @@
                 <li><a href="index.html" class="active navMenu">Início</a></li>
                 <li><a href="about.html" class="navMenu">Sobre</a></li>
                 <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
+                <li><a href="preview.html">Preview</a></li>
             </ul>
         </nav>
     </header>
     <main id="mainEditor">
         <section id="codinng">
-            <form>
-                <textarea name="editor" id="editor" cols="50" rows="20" onkeyup="promptProgramar();"></textarea>
+            <form id="editor-web">
+                <!-- cols="50" rows="20" -->
+                <label for="editor">Código</label>
+                <textarea name="editor" wrap="soft" id="editor" class="editor" onkeyup="promptProgramar();"></textarea>
+                
             </form>
+            <button id="updatePreview" class="buttonCTA" onclick="formatText();">Atualizar</button>
         </section>
         <section id="preview">
+            <label for="preview-section">Pré-visualização</label>
             <section id="preview-section" style="background-color: white; color: black; ">
             </section>
         </section>
-        <button id="updatePreview">Atualizar</button>
     </main>
-    
     <footer>
-
+        <p>Copyright 2023 &copy; Todos os direitos reservados</p>
     </footer>
-    <script>
-        
-    </script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/editor.js"></script>
 </body>
