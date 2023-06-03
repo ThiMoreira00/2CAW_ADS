@@ -30,19 +30,30 @@ function loadingPrompt() {
 function promptProgramar() {
 
     
-    preview.innerHTML = editor.value;
-    var previewHTML = preview.innerHTML;
-    // Fazendo split no código no formulário
-    var textoHTML = previewHTML.split("");
+    // preview.innerHTML = editor.value;
+    // var previewHTML = preview.innerHTML;
+    // // Fazendo split no código no formulário
+    // var textoHTML = previewHTML.split("");
 
-    var i = 0;
-
+    
     // A partir daqui, o código não funciona.
-    textoHTML.forEach(
-        function colorirHTML () {
-            textoHTML[i].style.color = "blue";
-            i++;
-        }
+    // textoHTML.forEach(
+        //     function colorirHTML () {
+            //         textoHTML[i].style.color = "blue";
+            //         i++;
+            //     }
+            
+            // );
 
-    );
+            // BLOCO 2
+            // var i = 0;
+        
+            // var codigoHTML;
+            // codigoHTML = editor.value;
+
+
+           
+
+    alert(valorEditor = document.getElementById("editor[1]"));
+              
 };
