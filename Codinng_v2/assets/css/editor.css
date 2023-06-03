@@ -3,7 +3,7 @@
     --vsc-dark-header-background: #3c3c3c;
 }
 
-textarea#editor {
+textarea[name=editor] {
     background-color: var(--vsc-dark-background);
     border: 1rem solid var(--vsc-dark-header-background);
     border-radius: 0.5rem;
@@ -12,7 +12,7 @@ textarea#editor {
     font-size: 1.5rem;
 }
 
-#preview {
+#preview-section {
     background-color: white;
     border: 1rem solid white;
     border-radius: 0.5rem;
@@ -21,16 +21,26 @@ textarea#editor {
     font-family: 'Times New Roman', Times, serif;
 }
 
-section#codinng, section#preview {
+textarea#editor, section#preview-section {
     /* width: calc(48% - 10px); */
-    width: calc(50em);
+    width: 46rem;
+    height: 35rem;
+    /* width: calc((95%)/2 - 3rem); */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+textarea#editor {
+    height: 37.1rem;
+    resize: none;
 }
 
 main#mainEditor {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 /* 
 button#updatePreview {
@@ -38,3 +48,7 @@ button#updatePreview {
     align-items: center;
 } */
 
+
+label[for="editor"], label[for="preview-section"] {
+    color: white;
+}
