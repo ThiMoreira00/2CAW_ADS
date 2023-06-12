@@ -171,7 +171,13 @@ var Jogo = {
 		Jogo.play = setInterval(Canvas._preencher, Configuracao.velocidade);	
 	},
 	_gameOver:function(){
-		if(Jogo.play!='') clearInterval(Jogo.play);
+		if(Jogo.play!='') { clearInterval(Jogo.play); 
+			
+		}
+		if(Jogo.pontos > parseInt(document.getElementById("record").innerText)) 
+			{ document.getElementById("record").innerText = Jogo.pontos; }
+			alert("Game over!");
+		
 	},
 	_pausar:function(){
 		if(Jogo.play!=''){
