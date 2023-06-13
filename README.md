@@ -11,5 +11,5 @@ Principais tags:
 | --------------- | ----------------------------|
 | <\!DOCTYPE html> | Identificador de script em HTML5 |
 | <html><\/html> | Identificador de script em HTML (qualquer versão) |
-  * | <head><\/head> | Informações do site para o navegador (não será exibido) |
-  * | <body><\/body> | Conteúdo do site (será exibido) |
+| <head><\/head> | Informações do site para o navegador (não será exibido) |
+| <body><\/body> | Conteúdo do site (será exibido) |
