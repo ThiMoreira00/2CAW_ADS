@@ -1,0 +1,58 @@
+<!-- 
+    
+    EXERCÍCIO 05 - CANVAS:
+    Exibir a área canvas no código HTML
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício | Canvas</title>
+    <style>
+
+        body {
+            background-color: rgb(205, 185, 221);   
+        }
+        
+        canvas#meuCanvas {
+            background-color: white; 
+            border: 2px dotted #ff64ff;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Área do canvas</h3>
+    <canvas id="meuCanvas" width="150px" height="150px">
+        <!-- Caso o navegador não tenha suporte a funcionalidade do canvas, o parágrafo será exibido. -->
+        <p>Esse navegador não possui suporte ao canvas.</p>
+    </canvas>
+
+    <script type="text/javascript">
+        {
+            /* Chamada do código em JavaScript*/
+
+            var cv = document.getElementById("meuCanvas"); // Identificando elemento com ID "meuCanvas"
+            var ctx = cv.getContext("2d"); // Selecionando o contexto do canvas para suporte ao desenho 2D
+
+            // .fillRect(posX, posY, largura, altura) = preencher (pintar) uma área
+            ctx.fillRect(25, 25, 100, 100);
+
+            // .clearRect(posX, posY, largura, altura) = apagar uma área
+            ctx.clearRect(45, 45, 60, 60);
+
+            // .strokeStyle = definir um estilo (cor) para a área. Esta função deve ser chamada ANTES de executar a pintura
+            ctx.strokeStyle = "#fff000";
+
+            // .strokeRect(posX, posY, largura, altura) = desenha um retângulo (sem área)
+            ctx.strokeRect(50, 50, 50, 50);
+
+            // .clearRect(0,0, cv.width, cv.height) = apagar todo o canvas (método recomendado)
+            // cv.width = cv.width; = apagar todo o canvas (método não recomendado)
+                
+
+        }
+    </script>
+</body>
+</html>
