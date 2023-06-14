@@ -1,0 +1,141 @@
+<!-- 
+
+    TENTATIVA 2:
+    Fazer o site SEM USAR frameworks externas
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codinng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="styleEdit.css">
+    <style>
+        header {
+            height: initial;
+        }
+    </style>
+    
+</head>
+<body id="bodyEditor">
+    <div class="background">
+        <img src="assets/background/esfera1.png" alt="" class="backgroundSphere">
+        <img src="assets/background/esfera2.png" alt="" class="backgroundSphere">
+    </div>
+    <header id="headerEditor">
+        <nav id="navEditor">
+            <h1 id="logo">Codinng</h1>
+            <ul>
+                <li><a href="index.html" class="active navMenu">Início</a></li>
+                <li><a href="about.html" class="navMenu">Sobre</a></li>
+                <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="codinng" style="display: inline-block;">
+            <form id="prompt">
+                <textarea name="editor" id="editor" cols="50" rows="20" onkeyup="promptProgramar();"></textarea>
+                <ul id="contadorEditor"></ul>
+            </form>
+        </section>
+        <section style="display: inline-block; width: 40%;">
+            <div id="preview" style="background-color: white; color: black; ">
+                <section id="preview-section">
+                </section>
+            </div>
+        </section>
+        <button>Atualizar</button>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- <script src="src/main.js"></script>
+    <script src="src/script.js"></script> -->
+    <!-- <script>
+        preview = document.getElementById('preview-section');
+editor = document.getElementById('editor');
+
+// Adicionando evento para incluir automaticamente o script de código
+document.addEventListener("DOMContentLoaded", function () {
+    loadingPrompt();
+    
+});
+
+function loadingPrompt() {
+
+    document.getElementById("editor").value = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+</body>
+</html>`;
+
+
+    // alert(document.getElementById("editor"));
+    editor = document.forms["prompt"];
+
+    var teste = document.forms["prompt"]["editor"];
+    alert(typeof(teste));
+    alert(teste);
+    // alert(editor.elements[0][2]);
+    for (var i = 0; i < editor.length ; i++) {
+    
+         if(document.getElementById("editor").value[i] == '<') {
+            editor.elements[i].style.color = "red"; // o problema está aqui. está pintando todos os elementos, invés do selecionado
+            
+
+         }
+    }
+
+    promptProgramar();
+}
+
+  editor = document.getElementById("editor").innerHTML;
+
+function promptProgramar() {
+
+    
+    preview.innerHTML = editor.value;
+    preview.style.all = 'unset';
+    preview.style = '';
+    preview.style.backgroundColor = 'white';
+    preview.style.color = 'black';
+}
+    </script> -->
+    <script>
+
+        document.addEventListener("keyup", function () {
+            loadingPrompt();
+            countLinhas;
+            
+        });
+
+        function countLinhas() {
+
+        var linhas = editor.value.split('\n');
+
+
+            for(var i = 1; i <= editor.length ; i++) {
+                document.getElementById("contadorEditor").innerHTML += "<li>" + i + "</li>";
+            }
+                
+        }
+
+    </script>
+</body>
+</html>

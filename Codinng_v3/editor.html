@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codinng</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- End of Google Fonts -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+	
+	<link href="assets/css/vscode-dark.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/codemirror.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/codemirror.css">
+    <link href="https://codemirror.net/5/addon/hint/show-hint.css" rel="stylesheet">  <!-- Mostrar dicas (CSS) -->
+	<script src="https://codemirror.net/5/addon/display/panel.js"></script>
+	<script src="https://codemirror.net/5/addon/hint/show-hint.js"></script>	
+	<script src="https://codemirror.net/5/mode/xml/xml.js"></script>
+	<script src="https://codemirror.net/5/mode/javascript/javascript.js"></script>
+	<script src="https://codemirror.net/5/mode/css/css.js"></script>
+	<script src="https://codemirror.net/5/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="https://codemirror.net/5/keymap/sublime.js"></script>
+	<link rel="stylesheet" href="assets/css/editor.css">
+	
+	<!-- Importação de plugins (CodeMirror) -->
+    <script src="assets/js/autocomplete.js"></script>
+
+    <script src="https://codemirror.net/5/addon/hint/html-hint.js"></script> <!-- Dicas em HTML -->
+    <script src="https://codemirror.net/5/addon/hint/css-hint.js"></script> <!-- Dicas em CSS -->
+    <script src="https://codemirror.net/5/addon/hint/xml-hint.js"></script> <!-- Dicas em XML -->
+    <script src="https://codemirror.net/5/addon/lint/lint.js"></script> <!-- Eu não sei o que é isso -->
+    <script src="https://codemirror.net/5/addon/selection/active-line.js"></script> <!-- Marcar linha ativa -->
+    <script src="https://codemirror.net/5/addon/edit/closebrackets.js"></script> <!-- Fechar tag automaticamente [OK] -->
+    <script src="https://codemirror.net/5/addon/edit/closetag.js"></script> <!-- Close TAG automaticamente -->
+    <script src="https://codemirror.net/5/addon/fold/xml-fold.js"></script> <!-- Dependência do closeTag -->
+    <script src="https://codemirror.net/5/addon/comment/comment.js"></script> <!-- Comentar -->
+    <script src="https://codemirror.net/5/addon/hint/javascript-hint.js"></script> <!-- Dicas em JS -->
+    <script src="https://codemirror.net/5/addon/hint/show-hint.js"></script> <!-- Dicas em JS -->
+    <style>
+        div.background img {
+            filter: hue-rotate(299deg);
+        }
+    </style>
+</head>
+<body id="bodyEditor" style="padding-inline: 0;">
+    <div class="background">
+        <img src="assets/img/esfera1.png" alt="" class="backgroundSphere">
+        <img src="assets/img/esfera2.png" alt="" class="backgroundSphere">
+    </div>
+    <header id="headerEditor">
+        <nav id="navEditor">
+            <h1 id="logo">Codinng</h1>
+            <ul>
+                <li><a href="index.html" class="active navMenu">Início</a></li>
+                <li><a href="about.html" class="navMenu">Sobre</a></li>
+                <li><button class="buttonRegistrar" onclick="popupRegistrar();">Registre-se</button></li>
+                <li><a href="preview.html">Preview</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="mainEditor">
+        <section id="codinng">
+            <form id="editor-web">
+                <!-- cols="50" rows="20" -->
+                <label for="editor">Código</label>
+                <textarea name="editor" wrap="soft" id="editor" class="editor" onkeyup="promptProgramar();"><script src="assets/js/autocomplete.js"></script></textarea>
+                
+            </form>
+            <button id="updatePreview" class="buttonCTA" onclick="formatText();">Atualizar</button>
+        </section>
+        <section id="preview">
+            <label for="preview-section">Pré-visualização</label>
+            <section id="preview-section" style="background-color: white; color: black; ">
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright 2023 &copy; Todos os direitos reservados</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/editor.js"></script>
+	
+    <script>
+        window.onload = function () {
+        var editor = CodeMirror.fromTextArea($("#editor")[0], {
+            lineNumbers: true,
+            lineWrapping: true,
+            theme: "vscode-dark",
+            keymap: "sublime",
+            // autoCloseBrackets: "default", // autoCloseBrackets
+            nonEmpty: false, // activeLine
+            activateOnTyping: true,
+            styleActiveLine: true,
+            autoCloseTags: true,
+            mode: "htmlmixed",
+            extraKeys: {"Ctrl-Space": "autocomplete"}
+
+        });
+        editor.save();
+    };
+    </script>
+	
+</body>
+</html>

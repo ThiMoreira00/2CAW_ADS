@@ -1,0 +1,146 @@
+.cm-s-meu-tema.CodeMirror {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-gutters {
+    background-color: #1e1e1e;
+    border-right: 1px solid #888;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-guttermarker {
+    color: #d4d4d4;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-guttermarker-subtle {
+    color: #888;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-linenumber {
+    color: #d4d4d4;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-cursor {
+    border-left: 1px solid #d4d4d4;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-linenumber {
+    color: #888;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-selected {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .cm-s-meu-tema .CodeMirror-line::selection,
+  .cm-s-meu-tema .CodeMirror-line > span::selection,
+  .cm-s-meu-tema .CodeMirror-line > span > span::selection {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .cm-s-meu-tema .CodeMirror-matchingbracket {
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    color: white !important;
+  }
+  
+  .cm-s-meu-tema .CodeMirror-matchingtag {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .cm-s-meu-tema .CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  
+  .cm-s-meu-tema .CodeMirror-matchingbracket,
+  .cm-s-meu-tema .CodeMirror-matchingtag {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .cm-s-meu-tema .CodeMirror-activeline-gutter {
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+  
+  .cm-s-meu-tema .CodeMirror-matchingtag {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .cm-s-meu-tema .CodeMirror-xml {
+    color: #d4d4d4;
+  }
+  
+  .cm-s-meu-tema .cm-comment {
+    color: #6A9955;
+  }
+  
+  .cm-s-meu-tema .cm-keyword {
+    color: #569CD6;
+  }
+  
+  .cm-s-meu-tema .cm-atom {
+    color: #F58CBA;
+  }
+  
+  .cm-s-meu-tema .cm-number {
+    color: #B5CEA8;
+  }
+  
+  .cm-s-meu-tema .cm-def {
+    color: #DCDCAA;
+  }
+  
+  .cm-s-meu-tema .cm-variable {
+    color: #9CDCFE;
+  }
+  
+  .cm-s-meu-tema .cm-variable-2 {
+    color: #9CDCFE;
+  }
+  
+  .cm-s-meu-tema .cm-property {
+    color: #9CDCFE;
+  }
+  
+  .cm-s-meu-tema .cm-operator {
+    color: #D4D4D4;
+  }
+  
+  .cm-s-meu-tema .cm-string {
+    color: #CE9178;
+  }
+  
+  .cm-s-meu-tema .cm-string-2 {
+    color: #CE9178;
+  }
+  
+  .cm-s-meu-tema .cm-meta {
+    color: #9CDCFE;
+  }
+  
+  .cm-s-meu-tema .cm-builtin {
+    color: #569CD6;
+  }
+  
+  .cm-s-meu-tema .cm-tag {
+    color: #569CD6;
+  }
+  
+  .cm-s-meu-tema .cm-attribute {
+    color: #9CDCFE;
+  }
+  
+  .cm-s-meu-tema .cm-header {
+    color: #9CDCFE;
+  }
+  
+  .cm-s-meu-tema .cm-quote {
+    color: #4EC9B0;
+  }
+  
+  .cm-s-meu-tema .cm-link {
+    color: #569CD6;
+  }
+
+  .cm-s-meu-tema .cm-keyword {
+    color: #569CD6;
+  }
+  

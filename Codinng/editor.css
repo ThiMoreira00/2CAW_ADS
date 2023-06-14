@@ -1,0 +1,23 @@
+:root {
+    --vsc-dark-background: #1e1e1e;
+    --vsc-dark-header-background: #3c3c3c;
+}
+
+textarea#editor {
+    background-color: var(--vsc-dark-background);
+    border: 1rem solid var(--vsc-dark-header-background);
+    border-radius: 0.5rem;
+    color: white;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 1.5rem;
+}
+
+#preview {
+    background-color: white;
+    border: 1rem solid white;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+

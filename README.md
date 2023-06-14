@@ -4,28 +4,34 @@ Repositório destinado às atividades e avaliações práticas da matéria Const
 
 
 ## Módulo 01 - HTML & CSS
+O módulo 1 apresentou pontos iniciais para o desenvolvimento web usando a linguagem de marcação HTML (Hypertext Markup Language) e as folhas de estilo CSS (Cascading Style Sheets).
 
-### Projeto001 - Página de exposição e venda de produtos musicais
-* Lista de coisas para serem feitas
-- [ ] Sobre a página
-- [x] Produtos
-- [ ] Carrinho
-- [ ] Completar pedido
-- [ ] Tabela
-- [ ] Vídeo
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Meu site</title>
+</head>
+<body>
+  <h1>Olá, mundo!</h1>
+</body>
+</html>
+```
 
-### Projeto002 - Página de exposição e venda de produtos esportivos
-* Lista de coisas para serem feitas
-- [x] Sobre a página
-- [x] Produtos
-- [x] Carrinho
-- [x] Completar pedido
-- [x] Tabela
-- [x] Vídeo
+Principais tags:
 
+| Tag | Significado |
+| --------------- | ----------------------------|
+| <\!DOCTYPE html> | Identificador do tipo de documento (HTML5) |
+| \<html><\/html> | Identificador de script em HTML (qualquer versão) |
+| \<head><\/head> | 'Configurações' do site para o navegador (não será exibido) |
+| \<body><\/body> | Conteúdo do site (será exibido) |
+| \<title><\/title> | Título do site (será exibido na aba do navegador) |
+| \<style><\/style> | Importação de estilos (CSS interno) |
+| \<script><\/script> | Importação de interações (JavaScript interno/externo) |
+| \<header><\/header> | Cabeçalho do site |
+| \<main><\/main> | Conteúdo principal do site |
+| \<footer><\/footer> | Rodapé do site |
+| \<section><\/section> | Separador de conteúdo em bloco |
+| \<article><\/article> | Conteúdo independente |
 
-## Módulo 02 - JavaScript
-
-* Exercícios
-- Exercício001 - Funções apresentadas
-- Exercício002 - Prática: Formulário usando window.prompt
