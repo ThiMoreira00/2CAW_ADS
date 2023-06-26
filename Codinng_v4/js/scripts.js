@@ -1,9 +1,6 @@
 
 function popupRegistrar() {
 
-    
-
-    
     var painel_login = document.getElementById('login');
     
     if (typeof(painel_login) != 'undefined' && painel_login != null) {
